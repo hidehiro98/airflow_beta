@@ -2,9 +2,9 @@
  * Fonts
  * ------------------------------------- */
 // Google fonts
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Montserrat:400,100,300,700,500");
-$base-font: "Open Sans", "Helvetica", "sans-serif";
-$header-font: "Montserrat", "Helvetica", "sans-serif";
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Robot:400,100,300,700,500");
+$base-font: "Source Sans Pro", "Helvetica", "sans-serif";
+$header-font: "Roboto", "Helvetica", "sans-serif";
 
 // Local fonts (uncomment following lines)
 // @font-face {
@@ -24,11 +24,17 @@ $base-height: 1.4;
  * Colors
  * ------------------------------------- */
 // Scheme
-$brand-color: #3F51B5;
+$brand-color: #0091ea;
 
-$red: #D23333;
-$blue: #469AE0;
-$yellow: #FDB631;
-$orange: #E67E22;
-$green: #32B796;
-$gray: #292B2C;
+$red: #FF5252;
+$light-blue: #64c1ff;
+$blue: $brand-color;
+$dark-blue: #0064b7;
+$yellow: #FFD600;
+$orange: #FF9100;
+$green: #00C853;
+
+$very-light-gray: #ECEFF1;
+$light-gray: #4f5b62;
+$gray: #263238;
+$dark-gray: #000a12;
