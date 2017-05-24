@@ -71,17 +71,36 @@
           align-items: center;
         }
 
+        p {
+          margin-bottom: 0;
+        }
+
+        i {
+          font-size: unset;
+        }
+
         .done {
           background-color: $green;
           i {
             color: white;
-            font-size: unset;
           }
         }
 
-        p {
-          margin-bottom: 0;
+        .reject {
+          background-color: $red;
+          i {
+            color: white;
+          }
         }
+
+        .remand {
+          background-color: $light-gray;
+        }
+
+        .default {
+          background-color: $light-gray;
+        }
+
 
       }
     }
