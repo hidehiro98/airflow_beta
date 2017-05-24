@@ -63,13 +63,26 @@
         justify-content: space-between;
         margin-bottom: 5px;
 
+        .img-circle {
+          height: 22px;
+          width: 22px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
         .done {
-          background-color: $green
+          background-color: $green;
+          i {
+            color: white;
+            font-size: unset;
+          }
         }
 
         p {
           margin-bottom: 0;
         }
+
       }
     }
   }
