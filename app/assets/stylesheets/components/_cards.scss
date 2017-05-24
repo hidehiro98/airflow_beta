@@ -142,3 +142,27 @@
     }
   }
 }
+
+.comment {
+  display: flex;
+
+  .comment-left {
+    flex: 0 0 15%;
+    display: flex;
+    justify-content: space-between;
+
+    .img-circle {
+      height: 30px;
+      width: 30px;
+    }
+
+    .comment-rectangle {
+
+    }
+  }
+
+  .comment-right {
+    flex: 0 0 85%;
+    background-color: $very-light-gray;
+  }
+}
