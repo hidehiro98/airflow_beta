@@ -14,6 +14,10 @@
     position: relative;
     display: flex;
 
+    .card-left-first-row {
+      font-weight: bold;
+    }
+
     .card-left-bottom-row {
       position: absolute;
       left: 0px;
