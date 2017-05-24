@@ -7,23 +7,30 @@
 
   .card-left-part {
     background-color: white;
-    flex: 0 1 70%;
+    flex: 0 1 75%;
     height: 100%;
     margin-right: 3px;
     padding: 5px;
     position: relative;
     display: flex;
 
-    .card-left-creator-leftbottom {
+    .card-left-bottom-row {
       position: absolute;
-      left: 5px;
-      bottom: 5px;
-      flex: 0 0 25%;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      display: flex;
+      justify-content: space-between;
+
+      .card-left-bottom-button {
+        flex: 0 0 25%;
+        margin: 5px;
+      }
     }
   }
 
   .card-right-part {
-    flex: 0 0 30%;
+    flex: 0 0 25%;
     height: 100%;
     margin-left: 3px;
     display: flex;
@@ -33,14 +40,37 @@
       background-color: white;
       flex: 0 0 25%;
       margin-bottom: 3px;
-      padding: 5px;
+      padding: 5px 10px;
+
+      h5 {
+        color: $light-gray;
+      }
     }
 
     .card-receivers {
       background-color: white;
       flex: 0 1 75%;
       margin-top: 3px;
-      padding: 5px;
+      padding: 5px 10px;
+
+      h5 {
+        color: $light-gray;
+      }
+
+
+      .card-receiver-name {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+
+        .done {
+          background-color: $green
+        }
+
+        p {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 }
