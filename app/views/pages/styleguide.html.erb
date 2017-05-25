@@ -569,3 +569,15 @@
     </div>
   </div>
 </div>
+
+<% content_for(:after_js) do %>
+  <%= javascript_tag do %>
+    $('.card-receiver-list').hover(
+      function() {
+        $('body').css('overflow-y', 'hidden');
+      }, function() {
+        $('body').css('overflow-y', 'scroll');
+      }
+    );
+  <% end %>
+<% end %>
