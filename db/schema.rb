@@ -10,10 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170530054827) do
+ActiveRecord::Schema.define(version: 20170530062101) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.string   "content"
+    t.integer  "request_id"
+    t.integer  "author_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_comments_on_author_id", using: :btree
+    t.index ["request_id"], name: "index_comments_on_request_id", using: :btree
+  end
+
+  create_table "receivers", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "request_id"
+    t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["request_id"], name: "index_receivers_on_request_id", using: :btree
+    t.index ["user_id"], name: "index_receivers_on_user_id", using: :btree
+  end
+
+  create_table "requests", force: :cascade do |t|
+    t.text     "content"
+    t.string   "status"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_requests_on_user_id", using: :btree
+  end
+
+  create_table "teams", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -34,4 +69,8 @@ ActiveRecord::Schema.define(version: 20170530054827) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "comments", "requests"
+  add_foreign_key "receivers", "requests"
+  add_foreign_key "receivers", "users"
+  add_foreign_key "requests", "users"
 end
