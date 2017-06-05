@@ -9,5 +9,5 @@ class User < ApplicationRecord
   has_many :comments, as: :author
 
   validates :first_name, presence: true, uniqueness: { scope: :last_name }
-  validates :last_name, presence: true
+  validates :last_name, :team, presence: true
 end
