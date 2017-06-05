@@ -3,7 +3,6 @@ class CreateReceivers < ActiveRecord::Migration[5.0]
     create_table :receivers do |t|
       t.references :user, foreign_key: true
       t.references :request, foreign_key: true
-      t.string :status
 
       t.timestamps
     end
