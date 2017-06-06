@@ -1,4 +1,4 @@
-class Reqeusts::SentRequestsController < ApplicationController
+class Requests::SentRequestsController < ApplicationController
   def index
   end
 end

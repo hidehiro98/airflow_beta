@@ -21,8 +21,8 @@ u1 = User.create!(email: 'a@b.com', password: '123123', team: t, first_name: 'Hi
 u2 = User.create!(email: 'a@c.com', password: '123123', team: t, first_name: 'Dim', last_name: 'Bosch')
 
 puts 'Creating requests...'
-r1 = Request.create!(content: 'Buying new PC', user: u1)
-r2 = Request.create!(content: 'Cealing company stamp', user: u1)
+r1 = Request.create!(content: 'Buying new PC', user: u1, duedate: '2017-06-17')
+r2 = Request.create!(content: 'Cealing company stamp', user: u1, duedate: '2017-06-17')
 
 puts 'Creating receivers...'
 rc1 = Receiver.create!(user: u2, request: r1)
