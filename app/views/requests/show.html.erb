@@ -13,11 +13,6 @@
               Close
             </div>
           </div>
-          <div class="card-left-bottom-button">
-            <div class="btn btn-default btn-block">
-              More
-            </div>
-          </div>
         </div>
       </div>
 
@@ -27,10 +22,12 @@
           <p>2017 5/31</p>
         </div>
 
-        <div class="card-creator">
-          <h5>Creator</h5>
-          <p>Julian Arahanga</p>
-        </div>
+        <% unless @request.user == current_user %>
+          <div class="card-creator">
+            <h5>Creator</h5>
+            <p><%= "#{@request.user.first_name} #{@request.user.last_name}" %></p>
+          </div>
+        <% end %>
 
         <div class="card-receivers">
           <h5>Receivers</h5>
