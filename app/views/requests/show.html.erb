@@ -37,14 +37,16 @@
           <div class="card-receivers">
             <h5>Receivers</h5>
           </div>
-          <div class="card-receiver-list">
-            <div class="card-receiver-name">
-              <p>Keanu Reeves</p>
-              <div class="img-circle <%= @request.status %>">
-                <i class="material-icons"><%= receiver_status_mi @request.status %></i>
+          <% @request.receivers.each do |receiver| %>
+            <div class="card-receiver-list">
+              <div class="card-receiver-name">
+                <p><%= "#{receiver.user.first_name} #{receiver.user.last_name}" %></p>
+                <div class="img-circle <%= receiver.status %>">
+                  <i class="material-icons"><%= receiver_status_mi receiver.status %></i>
+                </div>
               </div>
             </div>
-          </div>
+          <% end %>
         </div>
       </div>
     </div>
