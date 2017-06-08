@@ -121,25 +121,25 @@
           font-size: unset;
         }
 
-        .done {
+        .pending {
+          background-color: $light-gray;
+        }
+
+        .accepted {
           background-color: $green;
           i {
             color: white;
           }
         }
 
-        .reject {
+        .rejected {
           background-color: $red;
           i {
             color: white;
           }
         }
 
-        .remand {
-          background-color: $light-gray;
-        }
-
-        .default {
+        .commented {
           background-color: $light-gray;
         }
 
