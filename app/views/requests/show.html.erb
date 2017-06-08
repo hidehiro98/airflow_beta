@@ -26,7 +26,7 @@
         <div class="card-right-part">
           <div class="card-date">
             <h5>Due Date</h5>
-            <p>2017 5/31</p>
+            <p><%= @request.duedate %></p>
           </div>
           <% unless @request.user == current_user %>
             <div class="card-creator">
@@ -40,13 +40,12 @@
           <div class="card-receiver-list">
             <div class="card-receiver-name">
               <p>Keanu Reeves</p>
-              <div class="img-circle done">
-                <i class="material-icons">done</i>
+              <div class="img-circle <%= @request.status %>">
+                <i class="material-icons"><%= receiver_status_mi @request.status %></i>
               </div>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </div>
