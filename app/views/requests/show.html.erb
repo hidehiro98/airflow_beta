@@ -69,7 +69,7 @@
                     <%= "#{comment.author.first_name} #{comment.author.last_name}" %>
                   <% end %>
                 </span>
-                 commented <%= comment_time Time.zone.now - comment.created_at %> ago
+                 commented <%= time_ago_in_words comment.created_at %> ago
               </h5>
             </div>
             <div class="comment-right-content">
