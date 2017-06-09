@@ -31,22 +31,22 @@
           <% unless @request.user == current_user %>
             <div class="card-creator">
               <h5>Creator</h5>
-              <p><%= "#{@request.user.first_name} #{@request.user.last_name}" %></p>
+              <p><%= @request.user.name %></p>
             </div>
           <% end %>
           <div class="card-receivers">
             <h5>Receivers</h5>
           </div>
-          <% @request.receivers.each do |receiver| %>
-            <div class="card-receiver-list">
+          <div class="card-receiver-list">
+            <% @request.receivers.each do |receiver| %>
               <div class="card-receiver-name">
-                <p><%= "#{receiver.user.first_name} #{receiver.user.last_name}" %></p>
+                <p><%= receiver.user.name %></p>
                 <div class="img-circle <%= receiver.status %>">
                   <i class="material-icons"><%= receiver_status_mi receiver.status %></i>
                 </div>
               </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
@@ -65,9 +65,9 @@
               <h5>
                 <span class="comment-writer">
                   <% if comment.author_type == 'Receiver' %>
-                    <%= "#{comment.author.user.first_name} #{comment.author.user.last_name}" %>
+                    <%= comment.author.user.name %>
                   <% else %>
-                    <%= "#{comment.author.first_name} #{comment.author.last_name}" %>
+                    <%= comment.author.name %>
                   <% end %>
                 </span>
                  commented <%= time_ago_in_words comment.created_at %> ago
