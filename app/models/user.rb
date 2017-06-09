@@ -7,7 +7,12 @@ class User < ApplicationRecord
   belongs_to :team
   has_many :requests
   has_many :comments, as: :author
+  has_many :requests, through: :receivers
 
   validates :first_name, presence: true, uniqueness: { scope: :last_name }
   validates :last_name, :team, presence: true
+
+  def name
+    "#{first_name} #{last_name}"
+  end
 end

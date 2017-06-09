@@ -35,6 +35,6 @@ class RequestsController < ApplicationController
   end
 
   def request_params
-    params.require(:request).permit(:content, :duedate)
+    params.require(:request).permit(:content, :duedate, user_ids: [])
   end
 end
