@@ -29,21 +29,15 @@
 
       .card-left-bottom-button {
         flex: 1 1;
-        padding-right: 0;
-        padding-left: 0;
-        border-style: none;
-        // padding-left: 5px;
         margin-bottom: 5px;
+        padding-right: 0; // overwriting bootstrap
+        padding-left: 0; // overwriting bootstrap
+        border-style: none; // overwriting bootstrap
       }
 
       .card-left-bottom-button-space {
-        // flex: 0 0;
         width: 5px;
       }
-
-      // .card-left-bottom-button:last-child {
-      //   padding-right: 5px;
-      // }
     }
   }
 
