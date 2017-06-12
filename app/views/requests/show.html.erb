@@ -14,11 +14,18 @@
   </div>
 
   <div class="row">
-    <div class="col-md-offset-2 col-md-9">
-      <%= simple_form_for [@request, @comment] do |f| %>
-        <%= f.input :content, label: 'Comment' %>
-        <%= f.submit 'Create a comment', class: 'btn btn-primary' %>
-      <% end %>
+    <div class="col-md-offset-1 col-md-10">
+      <div class="comment">
+        <div class="comment-left"></div>
+        <div class="comment-right">
+          <div class="comment-right-content">
+            <%= simple_form_for [@request, @comment] do |f| %>
+              <%= f.input :content, label: 'Comment' %>
+              <%= f.submit 'Create a comment', class: 'btn btn-primary' %>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
