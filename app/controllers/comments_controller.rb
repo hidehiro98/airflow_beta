@@ -7,7 +7,7 @@ class CommentsController < ApplicationController
     if @comment.save
       redirect_to request_path(@request)
     else
-      redirect_back(fallback_location: root_path)
+      flash[:alert] = "Information missing."
     end
   end
 
