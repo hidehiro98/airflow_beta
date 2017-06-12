@@ -2,6 +2,7 @@ class RequestsController < ApplicationController
   before_action :set_request, only: [:show, :edit, :update, :destroy]
 
   def show
+    @comment = Comment.new
   end
 
   def new

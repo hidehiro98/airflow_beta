@@ -12,4 +12,13 @@
       <% end %>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-offset-2 col-md-9">
+      <%= simple_form_for [@request, @comment] do |f| %>
+        <%= f.input :content, label: 'Comment' %>
+        <%= f.submit 'Create a comment', class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
 </div>
