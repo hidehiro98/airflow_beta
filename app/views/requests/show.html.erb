@@ -1,101 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-offset-1 col-md-10">
-      <div class="card">
-        <div class="card-left-part">
-          <p>
-            <span class="card-left-first-row">
-              <%= @request.content %>
-            </span>
-          </p>
-          <div class="card-left-bottom-row">
-            <% if @request.user == current_user %>
-              <div class="card-left-bottom-button-space"></div>
-              <div class="card-left-bottom-button btn <%= close_button_class @request.status %> btn-block">
-                Close
-              </div>
-              <div class="card-left-bottom-button-space"></div>
-              <div class="card-left-bottom-button"></div>
-              <div class="card-left-bottom-button-space"></div>
-              <div class="card-left-bottom-button"></div>
-              <div class="card-left-bottom-button-space"></div>
-              <div class="card-left-bottom-button"></div>
-              <div class="card-left-bottom-button-space"></div>
-            <% else %>
-              <div class="card-left-bottom-button-space"></div>
-              <div class="card-left-bottom-button btn btn-success btn-block">
-                Accept
-              </div>
-              <div class="card-left-bottom-button-space"></div>
-              <div class="card-left-bottom-button btn btn-danger btn-block">
-                Reject
-              </div>
-              <div class="card-left-bottom-button-space"></div>
-              <div class="card-left-bottom-button btn btn-info btn-block">
-                Comment
-              </div>
-              <div class="card-left-bottom-button-space"></div>
-              <div class="card-left-bottom-button"></div>
-              <div class="card-left-bottom-button-space"></div>
-            <% end %>
-          </div>
-        </div>
-
-        <div class="card-right-part">
-          <div class="card-date">
-            <h5>Due Date</h5>
-            <p><%= @request.duedate %></p>
-          </div>
-          <% unless @request.user == current_user %>
-            <div class="card-creator">
-              <h5>Creator</h5>
-              <p><%= @request.user.name %></p>
-            </div>
-          <% end %>
-          <div class="card-receivers">
-            <h5>Receivers</h5>
-          </div>
-          <div class="card-receiver-list">
-            <% @request.receivers.each do |receiver| %>
-              <div class="card-receiver-name">
-                <p><%= receiver.user.name %></p>
-                <div class="img-circle <%= receiver.status %>">
-                  <i class="material-icons"><%= receiver_status_mi receiver.status %></i>
-                </div>
-              </div>
-            <% end %>
-          </div>
-        </div>
-      </div>
+      <%= render 'request_card', request: @request %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-offset-1 col-md-10">
       <% @request.comments.each do |comment| %>
-        <div class="comment">
-          <div class="comment-left">
-            <div class="img-circle"></div>
-            <div class="comment-rectangle"></div>
-          </div>
-          <div class="comment-right">
-            <div class="comment-right-info">
-              <h5>
-                <span class="comment-writer">
-                  <% if comment.author_type == 'Receiver' %>
-                    <%= comment.author.user.name %>
-                  <% else %>
-                    <%= comment.author.name %>
-                  <% end %>
-                </span>
-                 commented <%= time_ago_in_words comment.created_at %> ago
-              </h5>
-            </div>
-            <div class="comment-right-content">
-              <p><%= comment.content %></p>
-            </div>
-          </div>
-        </div>
+        <%= render 'comment', comment: comment %>
       <% end %>
     </div>
   </div>

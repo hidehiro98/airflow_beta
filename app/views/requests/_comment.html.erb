@@ -1,0 +1,23 @@
+<div class="comment">
+  <div class="comment-left">
+    <div class="img-circle"></div>
+    <div class="comment-rectangle"></div>
+  </div>
+  <div class="comment-right">
+    <div class="comment-right-info">
+      <h5>
+        <span class="comment-writer">
+          <% if comment.author_type == 'Receiver' %>
+            <%= comment.author.user.name %>
+          <% else %>
+            <%= comment.author.name %>
+          <% end %>
+        </span>
+         commented <%= time_ago_in_words comment.created_at %> ago
+      </h5>
+    </div>
+    <div class="comment-right-content">
+      <p><%= comment.content %></p>
+    </div>
+  </div>
+</div>
