@@ -1,0 +1,48 @@
+<div class="card">
+  <div class="card-left-part">
+    <p>
+      <span class="card-left-first-row">
+        <%= request.content %>
+      </span>
+    </p>
+    <div class="card-left-bottom-row">
+      <div class="card-left-bottom-button-space"></div>
+      <div class="card-left-bottom-button btn <%= close_button_class request.status %> btn-block">
+        Close
+      </div>
+      <div class="card-left-bottom-button-space"></div>
+      <div class="card-left-bottom-button"></div>
+      <div class="card-left-bottom-button-space"></div>
+      <div class="card-left-bottom-button"></div>
+      <div class="card-left-bottom-button-space"></div>
+      <div class="card-left-bottom-button"></div>
+      <div class="card-left-bottom-button-space"></div>
+    </div>
+  </div>
+
+  <div class="card-right-part">
+    <div class="card-date">
+      <h5>Due Date</h5>
+      <p><%= request.duedate %></p>
+    </div>
+    <% unless request.user == current_user %>
+      <div class="card-creator">
+        <h5>Creator</h5>
+        <p><%= request.user.name %></p>
+      </div>
+    <% end %>
+    <div class="card-receivers">
+      <h5>Receivers</h5>
+    </div>
+    <div class="card-receiver-list">
+      <% request.receivers.each do |receiver| %>
+        <div class="card-receiver-name">
+          <p><%= receiver.user.name %></p>
+          <div class="img-circle <%= receiver.status %>">
+            <i class="material-icons"><%= receiver_status_mi receiver.status %></i>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
