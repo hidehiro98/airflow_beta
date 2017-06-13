@@ -7,9 +7,7 @@
     </p>
     <div class="card-left-bottom-row">
       <div class="card-left-bottom-button-space"></div>
-      <div class="card-left-bottom-button btn btn-success btn-block">
-        Accept
-      </div>
+      <%= link_to 'Accept', accept_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-success btn-block" %>
       <div class="card-left-bottom-button-space"></div>
       <div class="card-left-bottom-button btn btn-danger btn-block">
         Reject
@@ -19,7 +17,7 @@
         Comment
       </div>
       <div class="card-left-bottom-button-space"></div>
-      <%= link_to 'More', request_path(request), class: "card-left-bottom-button btn btn-primary btn-block" %>
+      <%= link_to 'More', request, class: "card-left-bottom-button btn btn-primary btn-block" %>
       <div class="card-left-bottom-button-space"></div>
     </div>
   </div>
