@@ -1,8 +1,5 @@
 class Requests::ReceivedRequestsController < ApplicationController
   def index
-    receivers = Receiver.where(user: current_user)
-    @requests = []
-    receivers.each { |receiver| @requests << receiver.request }
-    @requests
+    @requests = current_user.received_requests
   end
 end

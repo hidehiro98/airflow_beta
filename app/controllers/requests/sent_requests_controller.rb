@@ -1,5 +1,5 @@
 class Requests::SentRequestsController < ApplicationController
   def index
-    @requests = Request.where(user: current_user)
+    @requests = current_user.requests
   end
 end
