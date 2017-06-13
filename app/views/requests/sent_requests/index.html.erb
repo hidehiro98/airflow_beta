@@ -1,0 +1,9 @@
+<div class="container">
+  <% @requests.each do |request| %>
+    <div class="row">
+      <div class="col-md-offset-1 col-md-10">
+        <%= render "sent_request_card", request: request %>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -1,82 +1,23 @@
 <div class="container">
   <div class="row">
     <div class="col-md-offset-1 col-md-10">
-      <div class="card">
-        <div class="card-left-part">
-          <p>
-            <span class="card-left-first-row">
-              <%= @request.content %>
-            </span>
-          </p>
-          <div class="card-left-bottom-row">
-            <div class="card-left-bottom-button">
-              <% if @request.status == 'accepted' %>
-                <div class="btn btn-success btn-block">
-                  Close
-                </div>
-              <% else %>
-                <div class="btn btn-info btn-block">
-                  Close
-                </div>
-              <% end %>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-right-part">
-          <div class="card-date">
-            <h5>Due Date</h5>
-            <p>2017 5/31</p>
-          </div>
-          <% unless @request.user == current_user %>
-            <div class="card-creator">
-              <h5>Creator</h5>
-              <p><%= "#{@request.user.first_name} #{@request.user.last_name}" %></p>
-            </div>
-          <% end %>
-          <div class="card-receivers">
-            <h5>Receivers</h5>
-          </div>
-          <div class="card-receiver-list">
-            <div class="card-receiver-name">
-              <p>Keanu Reeves</p>
-              <div class="img-circle done">
-                <i class="material-icons">done</i>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      <%= render 'request_card', request: @request %>
     </div>
   </div>
 
   <div class="row">
     <div class="col-md-offset-1 col-md-10">
       <% @request.comments.each do |comment| %>
-        <div class="comment">
-          <div class="comment-left">
-            <div class="img-circle"></div>
-            <div class="comment-rectangle"></div>
-          </div>
-          <div class="comment-right">
-            <div class="comment-right-info">
-              <h5>
-                <span class="comment-writer">
-                  <% if comment.author_type == 'Receiver' %>
-                    <%= "#{comment.author.user.first_name} #{comment.author.user.last_name}" %>
-                  <% else %>
-                    <%= "#{comment.author.first_name} #{comment.author.last_name}" %>
-                  <% end %>
-                </span>
-                 commented <%= time_ago_in_words comment.created_at %> ago
-              </h5>
-            </div>
-            <div class="comment-right-content">
-              <p><%= comment.content %></p>
-            </div>
-          </div>
-        </div>
+        <%= render 'comment', comment: comment %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-offset-2 col-md-9">
+      <%= simple_form_for [@request, @comment] do |f| %>
+        <%= f.input :content, label: 'Comment' %>
+        <%= f.submit 'Create a comment', class: 'btn btn-primary' %>
       <% end %>
     </div>
   </div>

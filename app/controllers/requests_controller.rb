@@ -2,6 +2,7 @@ class RequestsController < ApplicationController
   before_action :set_request, only: [:show, :edit, :update, :destroy]
 
   def show
+    @comment = Comment.new
   end
 
   def new
@@ -35,6 +36,6 @@ class RequestsController < ApplicationController
   end
 
   def request_params
-    params.require(:request).permit(:content, :duedate)
+    params.require(:request).permit(:content, :duedate, user_ids: [])
   end
 end
