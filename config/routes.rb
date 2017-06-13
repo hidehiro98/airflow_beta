@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
     member do
       patch 'accept', to: 'receivers#accept'
+      patch 'reject', to: 'receivers#reject'
     end
   end
 
