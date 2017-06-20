@@ -1,4 +1,11 @@
 <div class="container">
+  <div class="row">
+    <div class="col-md-offset-1 col-md-10">
+      <div class="new-request">
+        <%= link_to 'New Request', new_request_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
   <% @requests.each do |request| %>
     <div class="row">
       <div class="col-md-offset-1 col-md-10">
