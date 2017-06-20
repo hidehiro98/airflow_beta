@@ -3,3 +3,9 @@
   display: flex;
   flex-direction: row-reverse;
 }
+
+.tab-and-search {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
