@@ -1,5 +1,5 @@
 class Requests::ReceivedRequestsController < ApplicationController
   def index
-    @requests = current_user.received_requests.sort_by { |request| request.duedate }
+    @requests = current_user.received_requests.order(:duedate)
   end
 end
