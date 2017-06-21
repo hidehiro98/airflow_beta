@@ -8,9 +8,13 @@
     <div class="card-left-bottom-row">
       <% if @request.user == current_user %>
         <div class="card-left-bottom-button-space"></div>
-        <div class="card-left-bottom-button btn <%= close_button_class @request.status %> btn-block">
-          Close
-        </div>
+        <% if @request.status == ( 'pending' || 'commented' ) %>
+          <div class="card-left-bottom-button btn btn-info btn-block">
+            Cancel
+          </div>
+        <% else %>
+          <div class="card-left-bottom-button"></div>
+        <% end %>
         <div class="card-left-bottom-button-space"></div>
         <div class="card-left-bottom-button"></div>
         <div class="card-left-bottom-button-space"></div>
