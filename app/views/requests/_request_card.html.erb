@@ -1,6 +1,9 @@
 <div class="card">
   <div class="card-left-part">
     <p>
+      <span class="label <%= card_status_class @request.status %>">
+        <%= @request.status.capitalize %>
+      </span>
       <span class="card-left-first-row">
         <%= @request.content %>
       </span>
