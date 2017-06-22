@@ -11,6 +11,12 @@
     <div class="card-left-bottom-row">
       <% if @request.user == current_user %>
         <div class="card-left-bottom-button-space"></div>
+        <div class="card-left-bottom-button"></div>
+        <div class="card-left-bottom-button-space"></div>
+        <div class="card-left-bottom-button"></div>
+        <div class="card-left-bottom-button-space"></div>
+        <div class="card-left-bottom-button"></div>
+        <div class="card-left-bottom-button-space"></div>
         <% if @request.status == ( 'pending' || 'commented' ) %>
           <div class="card-left-bottom-button btn btn-info btn-block">
             Cancel
@@ -18,12 +24,6 @@
         <% else %>
           <div class="card-left-bottom-button"></div>
         <% end %>
-        <div class="card-left-bottom-button-space"></div>
-        <div class="card-left-bottom-button"></div>
-        <div class="card-left-bottom-button-space"></div>
-        <div class="card-left-bottom-button"></div>
-        <div class="card-left-bottom-button-space"></div>
-        <div class="card-left-bottom-button"></div>
         <div class="card-left-bottom-button-space"></div>
       <% else %>
         <div class="card-left-bottom-button-space"></div>
@@ -35,9 +35,7 @@
           Reject
         </div>
         <div class="card-left-bottom-button-space"></div>
-        <div class="card-left-bottom-button btn btn-info btn-block">
-          Comment
-        </div>
+        <div class="card-left-bottom-button"></div>
         <div class="card-left-bottom-button-space"></div>
         <div class="card-left-bottom-button"></div>
         <div class="card-left-bottom-button-space"></div>
