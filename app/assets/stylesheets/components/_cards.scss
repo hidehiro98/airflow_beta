@@ -7,17 +7,27 @@
   margin-top: 20px;
 
   .card-left-part {
+    flex-direction: column;
     background-color: white;
     flex: 0 1 75%;
     height: 100%;
     margin-right: 3px;
     padding: 5px;
     position: relative;
-    display: flex;
 
-    .card-left-first-row {
-      font-weight: bold;
+    .card-left-header {
+      display: flex;
+
+      h4 {
+        font-weight: bold;
+        margin-top: 0;
+      }
+
+      .card-left-label {
+        margin-right: 5px;
+      }
     }
+
 
     .card-left-bottom-row {
       position: absolute;
