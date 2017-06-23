@@ -1,4 +1,24 @@
 <div class="container">
+  <div class="row">
+    <div class="col-md-offset-1 col-md-10">
+      <div class="new-request">
+        <%= link_to 'New Request', new_request_path, class: 'btn btn-primary' %>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-offset-1 col-md-10">
+      <div class="tab-and-search">
+        <ul class="nav nav-tabs">
+          <li role="presentation" class="active"><a href="#">Open</a></li>
+          <li role="presentation"><a href="#">Closed</a></li>
+        </ul>
+        <form action="">
+          <input type="text" placeholder="Search request">
+        </form>
+      </div>
+    </div>
+  </div>
   <% @requests.each do |request| %>
     <div class="row">
       <div class="col-md-offset-1 col-md-10">

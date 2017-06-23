@@ -7,10 +7,13 @@ module CardHelper
     end
   end
 
-  def close_button_class(status)
+  def card_status_class(status)
     case status
-    when 'accepted' then 'btn-success'
-    else 'btn-info'
+    when 'pending' then 'label-default'
+    when 'accepted' then 'label-success'
+    when 'rejected' then 'label-danger'
+    when 'commented' then 'label-warning'
+    when 'canceled' then 'label-info'
     end
   end
 end

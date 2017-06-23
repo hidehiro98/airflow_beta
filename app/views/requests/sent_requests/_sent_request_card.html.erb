@@ -1,21 +1,24 @@
 <div class="card">
   <div class="card-left-part">
-    <p>
-      <span class="card-left-first-row">
+    <div class="card-left-header">
+      <h4>
+        <span class="card-left-label label <%= card_status_class request.status %>">
+          <%= request.status.capitalize %>
+        </span>
         <%= request.content %>
-      </span>
-    </p>
+      </h4>
+    </div>
     <div class="card-left-bottom-row">
       <div class="card-left-bottom-button-space"></div>
-      <div class="card-left-bottom-button btn <%= close_button_class request.status %> btn-block">
-        Close
+      <div class="card-left-bottom-button"></div>
+      <div class="card-left-bottom-button-space"></div>
+      <div class="card-left-bottom-button"></div>
+      <div class="card-left-bottom-button-space"></div>
+      <%= link_to 'Comment', request, class: "card-left-bottom-button btn btn-primary btn-block" %>
+      <div class="card-left-bottom-button-space"></div>
+      <div class="card-left-bottom-button btn btn-info btn-block">
+        Cancel
       </div>
-      <div class="card-left-bottom-button-space"></div>
-      <div class="card-left-bottom-button"></div>
-      <div class="card-left-bottom-button-space"></div>
-      <div class="card-left-bottom-button"></div>
-      <div class="card-left-bottom-button-space"></div>
-      <%= link_to 'More', request, class: "card-left-bottom-button btn btn-primary btn-block" %>
       <div class="card-left-bottom-button-space"></div>
     </div>
   </div>
