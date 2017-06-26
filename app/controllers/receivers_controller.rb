@@ -7,6 +7,7 @@ class ReceiversController < ApplicationController
 
   def reject
     current_user.receivers.find_by(request_id: params[:id]).rejected!
+    Request.find(params[:id]).check_status
     redirect_back(fallback_location: root_path)
   end
 end

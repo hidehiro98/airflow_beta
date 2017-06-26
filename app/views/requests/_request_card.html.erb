@@ -2,17 +2,17 @@
   <div class="card-left-part">
     <div class="card-left-header">
       <h4>
-        <span class="card-left-label label <%= card_status_class @request.status %>">
-          <%= @request.status.capitalize %>
+        <span class="card-left-label label <%= card_status_class request.status %>">
+          <%= request.status.capitalize %>
         </span>
-        <%= @request.content %>
+        <%= request.content %>
       </h4>
     </div>
     <div>
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen </p>
     </div>
     <div class="card-left-bottom-row">
-      <% if @request.user == current_user %>
+      <% if request.user == current_user %>
         <div class="card-left-bottom-button-space"></div>
         <div class="card-left-bottom-button"></div>
         <div class="card-left-bottom-button-space"></div>
@@ -20,17 +20,17 @@
         <div class="card-left-bottom-button-space"></div>
         <div class="card-left-bottom-button"></div>
         <div class="card-left-bottom-button-space"></div>
-        <% if @request.status == ( 'pending' || 'commented' ) %>
-          <%= link_to 'Cancel', cancel_request_path(@request), method: :patch, class: "card-left-bottom-button btn btn-info btn-block" %>
+        <% if request.status == ( 'pending' || 'commented' ) %>
+          <%= link_to 'Cancel', cancel_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-info btn-block" %>
         <% else %>
           <div class="card-left-bottom-button"></div>
         <% end %>
         <div class="card-left-bottom-button-space"></div>
       <% else %>
         <div class="card-left-bottom-button-space"></div>
-        <%= link_to 'Accept', accept_request_path(@request), method: :patch, class: "card-left-bottom-button btn btn-success btn-block" %>
+        <%= link_to 'Accept', accept_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-success btn-block" %>
         <div class="card-left-bottom-button-space"></div>
-        <%= link_to 'Reject', reject_request_path(@request), method: :patch, class: "card-left-bottom-button btn btn-danger btn-block" %>
+        <%= link_to 'Reject', reject_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-danger btn-block" %>
         <div class="card-left-bottom-button-space"></div>
         <div class="card-left-bottom-button"></div>
         <div class="card-left-bottom-button-space"></div>
@@ -43,19 +43,19 @@
   <div class="card-right-part">
     <div class="card-date">
       <h5>Due Date</h5>
-      <p><%= @request.duedate %></p>
+      <p><%= request.duedate %></p>
     </div>
-    <% unless @request.user == current_user %>
+    <% unless request.user == current_user %>
       <div class="card-creator">
         <h5>Creator</h5>
-        <p><%= @request.user.name %></p>
+        <p><%= request.user.name %></p>
       </div>
     <% end %>
     <div class="card-receivers">
       <h5>Receivers</h5>
     </div>
     <div class="card-receiver-list">
-      <% @request.receivers.each do |receiver| %>
+      <% request.receivers.each do |receiver| %>
         <div class="card-receiver-name">
           <p><%= receiver.user.name %></p>
           <div class="img-circle <%= receiver.status %>">
