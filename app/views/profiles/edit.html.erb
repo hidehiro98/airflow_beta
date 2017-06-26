@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-offset-3 col-md-6">
+      <h2>Profile edit</h2>
+      <%= simple_form_for(@user, url: '/profile') do |f| %>
+        <%#= image_tag @user.photo.url.thumb if @user.photo? %>
+        <%= f.input :photo %>
+        <%= f.input :photo_cache, as: :hidden %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <%= f.input :email %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>

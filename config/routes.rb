@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     resources :sent_requests, :received_requests, only: :index
   end
 
-  resources :requests, except: [:index] do
+  resources :requests, except: :index do
     resources :comments, only: :create
 
     member do
@@ -16,6 +16,8 @@ Rails.application.routes.draw do
       patch 'reject', to: 'receivers#reject'
     end
   end
+
+  resource :profile, only: [:show, :edit, :update]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

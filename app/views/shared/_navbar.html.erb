@@ -1,24 +1,28 @@
 <div class="navbar-wagon navbar-wagon-fixed">
   <!-- Tabs -->
-  <div class="navbar-wagon-tabs">
-    <div class="navbar-wagon-tab">
-      <%= link_to root_path do %>
-        <div class="badge-container">
-          <i class="material-icons">open_in_new</i>
-          <div class="badge badge-red"><%= current_user.requests.open.size %></div>
-        </div>
-      <% end %>
-    </div>
+  <% if user_signed_in? %>
+    <div class="navbar-wagon-tabs">
+      <div class="navbar-wagon-tab">
+        <%= link_to root_path do %>
+          <div class="badge-container">
+            <i class="material-icons">open_in_new</i>
+            <div class="badge badge-red"><%= current_user.requests.open.size %></div>
+          </div>
+        <% end %>
+      </div>
 
-    <div class="navbar-wagon-tab">
-      <%= link_to root_path do %>
-        <div class="badge-container">
-          <i class="material-icons">mail_outline</i>
-          <div class="badge badge-red"><%= current_user.receivers.pending.size %></div>
-        </div>
-      <% end %>
+      <div class="navbar-wagon-tab">
+        <%= link_to root_path do %>
+          <div class="badge-container">
+            <i class="material-icons">mail_outline</i>
+            <div class="badge badge-red"><%= current_user.receivers.pending.size %></div>
+          </div>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% else %>
+    <div></div>
+  <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
@@ -29,16 +33,16 @@
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
         <div class="dropdown">
-          <%= image_tag "http://placehold.it/40x40", class: "avatar dropdown-toggle", "data-toggle" => "dropdown" %>
+          <%= image_tag current_user.photo.url(:navbar_face), class: "avatar dropdown-toggle", "data-toggle" => "dropdown" %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
-              <%= link_to "#" do %>
+              <%= link_to profile_path do %>
                 <i class="material-icons">account_circle</i> <%= t(".profile", default: "Profile") %>
               <% end %>
             </li>
             <li>
               <%= link_to "#" do %>
-                <i class="material-icons">settings</i>  <%= t(".profile", default: "Settings") %>
+                <i class="material-icons">settings</i>  <%= t(".Settings", default: "Settings") %>
               <% end %>
             </li>
             <li>
