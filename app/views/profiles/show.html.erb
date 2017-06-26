@@ -4,7 +4,7 @@
       <h2>Profile page</h2>
       <div>
         <% if @user.photo? %>
-          <%= cl_image_tag @user.photo %>
+          <%= image_tag @user.photo.url(:bright_face), class: 'img-circle' %>
         <% else %>
           <i class="material-icons md-48">account_circle</i>
         <% end %>
