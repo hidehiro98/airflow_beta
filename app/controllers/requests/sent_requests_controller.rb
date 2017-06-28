@@ -3,7 +3,7 @@ class Requests::SentRequestsController < ApplicationController
     @requests = current_user.requests.open.order(:duedate)
   end
 
-  def close
+  def closed
     @requests = current_user.requests.closed.order(:duedate)
   end
 end
