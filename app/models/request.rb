@@ -13,6 +13,7 @@ class Request < ApplicationRecord
 
   def check_status
     accepted! if receivers.all?(&:accepted?)
+    rejected! if receivers.any?(&:rejected?)
   end
 
 end

@@ -1,11 +1,20 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'pages#home'
+  root 'pages#home'
 
   get 'styleguide', to: 'pages#styleguide'
 
   namespace :requests do
-    resources :sent_requests, :received_requests, only: :index
+    resources :sent_requests, only: :index do
+      collection do
+        get 'closed', to: 'sent_requests#closed'
+      end
+    end
+    resources :received_requests, only: :index do
+      collection do
+        get 'replied', to: 'received_requests#replied'
+      end
+    end
   end
 
   resources :requests, except: :index do
@@ -14,6 +23,7 @@ Rails.application.routes.draw do
     member do
       patch 'accept', to: 'receivers#accept'
       patch 'reject', to: 'receivers#reject'
+      patch 'cancel', to: 'requests#cancel'
     end
   end
 
