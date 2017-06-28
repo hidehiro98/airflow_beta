@@ -5,7 +5,11 @@ Rails.application.routes.draw do
   get 'styleguide', to: 'pages#styleguide'
 
   namespace :requests do
-    resources :sent_requests, :received_requests, only: :index
+    resources :sent_requests, :received_requests, only: :index do
+      collection do
+        get 'close', to: 'sent_requests#close'
+      end
+    end
   end
 
   resources :requests, except: :index do
