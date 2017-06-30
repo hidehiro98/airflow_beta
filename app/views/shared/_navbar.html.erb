@@ -32,8 +32,12 @@
 
       <!-- Profile picture and dropdown -->
       <div class="navbar-wagon-item">
-        <div class="dropdown">
-          <%= image_tag current_user.photo.url(:navbar_face), class: "avatar dropdown-toggle", "data-toggle" => "dropdown" %>
+        <div class="dropdown navbar-avatar-height">
+          <% if current_user.photo.url %>
+            <%= image_tag current_user.photo.url(:navbar_face), class: "avatar dropdown-toggle", "data-toggle" => "dropdown" %>
+          <% else %>
+            <i class="avatar navbar-avatar dropdown-toggle material-icons" data-toggle="dropdown">account_circle</i>
+          <% end %>
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to profile_path do %>
