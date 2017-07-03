@@ -6,4 +6,5 @@ class Receiver < ApplicationRecord
   validates :request, :user, presence: true
 
   enum status: { pending: 0, accepted: 1, rejected: 2, commented: 3, deleted: 4 }
+  scope :replied, -> { where(status: [:accepted, :rejected, :commented]) }
 end
