@@ -1,5 +1,5 @@
 class RequestsController < ApplicationController
-  before_action :set_request, only: [:show, :edit, :update, :destroy, :cancel]
+  before_action :set_request, only: [:show, :edit, :update, :destroy, :cancel, :delete]
 
   def show
     @comment = Comment.new
@@ -31,6 +31,12 @@ class RequestsController < ApplicationController
 
   def cancel
     @request.canceled!
+    redirect_back(fallback_location: root_path)
+  end
+
+  def delete
+    @request.deleted!
+    @request.delete_receivers
     redirect_back(fallback_location: root_path)
   end
 

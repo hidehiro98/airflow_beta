@@ -19,6 +19,7 @@ Rails.application.routes.draw do
       patch 'accept', to: 'receivers#accept'
       patch 'reject', to: 'receivers#reject'
       patch 'cancel', to: 'requests#cancel'
+      patch 'delete', to: 'requests#delete'
     end
   end
 
