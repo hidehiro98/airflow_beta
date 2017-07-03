@@ -17,7 +17,7 @@ class Request < ApplicationRecord
   end
 
   def delete_receivers
-
+    receivers.each(&:deleted!)
   end
 
 end
