@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'pages#home'
+  root 'requests/received_requests#index'
 
   get 'styleguide', to: 'pages#styleguide'
 
