@@ -1,12 +1,12 @@
 class Request < ApplicationRecord
   belongs_to :user
   has_many :comments
-  has_many :receivers
+  has_many :receivers, dependent: :destroy
   has_many :users, through: :receivers
 
   validates :content, :user, :duedate, presence: true
 
-  enum status: { pending: 0, accepted: 1, rejected: 2, commented: 3, canceled: 4, deleted: 5 }
+  enum status: { pending: 0, accepted: 1, rejected: 2, commented: 3, canceled: 4 }
 
   scope :open, -> { where(status: [:pending, :commented]) }
   scope :closed, -> { where(status: [:accepted, :rejected, :canceled]) }
@@ -15,9 +15,4 @@ class Request < ApplicationRecord
     accepted! if receivers.all?(&:accepted?)
     rejected! if receivers.any?(&:rejected?)
   end
-
-  def delete_receivers
-    receivers.each(&:deleted!)
-  end
-
 end
