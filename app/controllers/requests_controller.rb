@@ -27,6 +27,8 @@ class RequestsController < ApplicationController
   end
 
   def destroy
+    @request.destroy
+    redirect_to requests_sent_path
   end
 
   def cancel

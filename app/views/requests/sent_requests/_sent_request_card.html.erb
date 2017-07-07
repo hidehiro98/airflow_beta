@@ -16,9 +16,11 @@
       <div class="card-left-bottom-button-space"></div>
       <%= link_to 'Comment', request, class: "card-left-bottom-button btn btn-primary btn-block" %>
       <div class="card-left-bottom-button-space"></div>
-      <div class="card-left-bottom-button btn btn-info btn-block">
-        Cancel
-      </div>
+      <% if request.canceled? %>
+        <%= link_to 'Delete', request, method: :delete, class: "card-left-bottom-button btn btn-info btn-block", data: { confirm: 'Are you sure?' } %>
+      <% else %>
+        <%= link_to 'Cancel', cancel_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-info btn-block" %>
+      <% end %>
       <div class="card-left-bottom-button-space"></div>
     </div>
   </div>

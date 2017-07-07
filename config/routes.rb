@@ -1,20 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
-  root 'pages#home'
+  root 'requests/received_requests#index'
 
   get 'styleguide', to: 'pages#styleguide'
 
   namespace :requests do
-    resources :sent_requests, only: :index do
-      collection do
-        get 'closed', to: 'sent_requests#closed'
-      end
-    end
-    resources :received_requests, only: :index do
-      collection do
-        get 'replied', to: 'received_requests#replied'
-      end
-    end
+    get 'sent', to: 'sent_requests#index'
+    get 'sent/closed', to: 'sent_requests#closed'
+
+    get 'received', to: 'received_requests#index'
+    get 'received/replied', to: 'received_requests#replied'
   end
 
   resources :requests, except: :index do

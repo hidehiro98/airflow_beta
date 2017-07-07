@@ -1,7 +1,7 @@
 class Request < ApplicationRecord
   belongs_to :user
   has_many :comments
-  has_many :receivers
+  has_many :receivers, dependent: :destroy
   has_many :users, through: :receivers
 
   validates :content, :user, :duedate, presence: true
@@ -15,5 +15,4 @@ class Request < ApplicationRecord
     accepted! if receivers.all?(&:accepted?)
     rejected! if receivers.any?(&:rejected?)
   end
-
 end
