@@ -2,16 +2,19 @@ class RequestsController < ApplicationController
   before_action :set_request, only: [:show, :edit, :update, :destroy, :cancel]
 
   def show
+    authorize @request
     @comment = Comment.new
   end
 
   def new
     @request = Request.new
+    authorize @request
   end
 
   def create
     @request = Request.new(request_params)
     @request.user = current_user
+    authorize @request
 
     if @request.save
       redirect_to request_path(@request)
@@ -27,11 +30,13 @@ class RequestsController < ApplicationController
   end
 
   def destroy
+    authorize @request
     @request.destroy
     redirect_to requests_sent_path
   end
 
   def cancel
+    authorize @request
     @request.canceled!
     redirect_back(fallback_location: root_path)
   end

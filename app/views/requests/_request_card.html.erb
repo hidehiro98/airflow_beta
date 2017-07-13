@@ -21,8 +21,14 @@
         <div class="card-left-bottom-button-space"></div>
         <div class="card-left-bottom-button"></div>
         <div class="card-left-bottom-button-space"></div>
-        <% if request.status == ( 'pending' || 'commented' ) %>
-          <%= link_to 'Cancel', cancel_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-info btn-block" %>
+        <% if request.pending? || request.commented? %>
+          <% if policy(request).cancel? %>
+            <%= link_to 'Cancel', cancel_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-info btn-block" %>
+          <% end %>
+        <% elsif request.canceled? %>
+          <% if policy(request).destroy? %>
+            <%= link_to 'Delete', request, method: :delete, class: "card-left-bottom-button btn btn-info btn-block", data: { confirm: 'Are you sure?' } %>
+          <% end %>
         <% else %>
           <div class="card-left-bottom-button"></div>
         <% end %>

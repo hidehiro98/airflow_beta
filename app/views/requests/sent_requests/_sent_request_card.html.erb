@@ -17,9 +17,13 @@
       <%= link_to 'Comment', request, class: "card-left-bottom-button btn btn-primary btn-block" %>
       <div class="card-left-bottom-button-space"></div>
       <% if request.canceled? %>
-        <%= link_to 'Delete', request, method: :delete, class: "card-left-bottom-button btn btn-info btn-block", data: { confirm: 'Are you sure?' } %>
+        <% if policy(request).destroy? %>
+          <%= link_to 'Delete', request, method: :delete, class: "card-left-bottom-button btn btn-info btn-block", data: { confirm: 'Are you sure?' } %>
+        <% end %>
       <% else %>
-        <%= link_to 'Cancel', cancel_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-info btn-block" %>
+        <% if policy(request).cancel? %>
+          <%= link_to 'Cancel', cancel_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-info btn-block" %>
+        <% end %>
       <% end %>
       <div class="card-left-bottom-button-space"></div>
     </div>
