@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new(comment_params)
     @comment.request = @request
     @comment.author = current_user
+    authorize @comment
     if @comment.save
       redirect_to request_path(@request)
     else
