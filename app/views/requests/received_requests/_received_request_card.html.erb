@@ -10,9 +10,13 @@
     </div>
     <div class="card-left-bottom-row">
       <div class="card-left-bottom-button-space"></div>
-      <%= link_to 'Accept', accept_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-success btn-block" %>
+      <% if policy(request.receivers.find_by(user: current_user)).accept? %>
+        <%= link_to 'Accept', accept_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-success btn-block" %>
+      <% end %>
       <div class="card-left-bottom-button-space"></div>
-      <%= link_to 'Reject', reject_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-danger btn-block" %>
+      <% if policy(request.receivers.find_by(user: current_user)).reject? %>
+        <%= link_to 'Reject', reject_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-danger btn-block" %>
+      <% end %>
       <div class="card-left-bottom-button-space"></div>
       <%= link_to 'Comment', request, class: "card-left-bottom-button btn btn-primary btn-block" %>
       <div class="card-left-bottom-button-space"></div>
