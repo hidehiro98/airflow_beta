@@ -19,9 +19,11 @@
         <div class="comment-left"></div>
         <div class="comment-right">
           <div class="comment-right-content">
-            <%= simple_form_for [@request, @comment] do |f| %>
-              <%= f.input :content, label: 'Comment' %>
-              <%= f.submit 'Create a comment', class: 'btn btn-primary' %>
+            <% if policy(Comment).create? %>
+              <%= simple_form_for [@request, @comment] do |f| %>
+                <%= f.input :content, label: 'Comment' %>
+                <%= f.submit 'Create a comment', class: 'btn btn-primary' %>
+              <% end %>
             <% end %>
           </div>
         </div>

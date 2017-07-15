@@ -21,6 +21,7 @@ gem 'materialize-sass'
 gem 'material_icons'
 gem 'cloudinary'
 gem 'carrierwave', '~> 0.11.2'
+gem 'pundit'
 
 group :development, :test do
   gem 'binding_of_caller'
