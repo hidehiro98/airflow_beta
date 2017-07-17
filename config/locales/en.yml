@@ -21,3 +21,6 @@
 
 en:
   hello: "Hello world"
+  layouts:
+    application:
+      title: 'Air flow -a simple work flow tool-'
