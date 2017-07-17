@@ -4,7 +4,7 @@
       <%= simple_form_for @request do |f| %>
         <%= f.input :content %>
         <%= f.input :duedate %>
-        <%= f.association :users, as: :check_boxes, label: 'Receivers' %>
+        <%= f.association :users, collection: User.where(team: current_user.team), as: :check_boxes, label: 'Receivers' %>
         <%= f.submit 'Create a request', class: 'btn btn-primary' %>
       <% end %>
     </div>
