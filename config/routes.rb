@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: { registrations: 'users/registrations' }
-
   root 'requests/received_requests#index'
 
   get 'styleguide', to: 'pages#styleguide'
+
+  scope '(:locale)', locale: /ja/ do
+    devise_for :users, controllers: { registrations: 'users/registrations' }
+  end
 
   scope '(:locale)', locale: /ja/ do
     namespace :requests do
