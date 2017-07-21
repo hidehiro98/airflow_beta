@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_many :receivers
   has_many :received_requests, through: :receivers, source: :request
 
-  validates :first_name, presence: true, uniqueness: { scope: :last_name }
+  validates :first_name, presence: true, uniqueness: { scope: [:last_name, :team] }
   validates :last_name, :team, presence: true
 
   def name

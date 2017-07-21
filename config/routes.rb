@@ -1,24 +1,31 @@
 Rails.application.routes.draw do
-  devise_for :users
   root 'requests/received_requests#index'
 
   get 'styleguide', to: 'pages#styleguide'
 
-  namespace :requests do
-    get 'sent', to: 'sent_requests#index'
-    get 'sent/closed', to: 'sent_requests#closed'
-
-    get 'received', to: 'received_requests#index'
-    get 'received/replied', to: 'received_requests#replied'
+  scope '(:locale)', locale: /ja/ do
+    devise_for :users, controllers: { registrations: 'users/registrations' }
   end
 
-  resources :requests, except: :index do
-    resources :comments, only: :create
+  scope '(:locale)', locale: /ja/ do
+    namespace :requests do
+      get 'sent', to: 'sent_requests#index'
+      get 'sent/closed', to: 'sent_requests#closed'
 
-    member do
-      patch 'accept', to: 'receivers#accept'
-      patch 'reject', to: 'receivers#reject'
-      patch 'cancel', to: 'requests#cancel'
+      get 'received', to: 'received_requests#index'
+      get 'received/replied', to: 'received_requests#replied'
+    end
+  end
+
+  scope '(:locale)', locale: /ja/ do
+    resources :requests, except: :index do
+      resources :comments, only: :create
+
+      member do
+        patch 'accept', to: 'receivers#accept'
+        patch 'reject', to: 'receivers#reject'
+        patch 'cancel', to: 'requests#cancel'
+      end
     end
   end
 

@@ -3,7 +3,7 @@
     <div class="col-md-offset-1 col-md-10">
       <div class="new-request">
         <% if policy(Request).create? %>
-          <%= link_to 'New Request', new_request_path, class: 'btn btn-primary' %>
+          <%= link_to t('.new_request'), new_request_path, class: 'btn btn-primary' %>
         <% end %>
       </div>
     </div>
@@ -13,14 +13,14 @@
       <div class="tab-and-search">
         <ul class="nav nav-tabs">
           <li role="presentation" class="active">
-            <a >Open</a>
+            <a><%= t('.open') %></a>
           </li>
           <li role="presentation">
-            <%= link_to 'Close', requests_sent_closed_path %>
+            <%= link_to t('.close'), requests_sent_closed_path %>
           </li>
         </ul>
         <form action="">
-          <input type="text" placeholder="Search request">
+          <input type="text" placeholder="<%= t('.search_request') %>">
         </form>
       </div>
     </div>

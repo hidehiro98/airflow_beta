@@ -1,0 +1,23 @@
+ja:
+  layouts:
+    application:
+      title: 'Air flow -シンプルなワークフローツール-'
+  requests:
+    sent_requests:
+      index:
+        new_request: '新しいリクエスト'
+        open: 'オープン'
+        close: 'クローズ'
+        search_request: '検索'
+      sent_request_card:
+          pending: '保留'
+          accepted: '承認済'
+          rejected: '否決'
+          commented: '差し戻し'
+          canceled: 'キャンセル'
+          comment: 'コメント'
+          delete: '削除'
+          cancel: 'キャンセル'
+          due_date: '期限'
+          creator: '申請者'
+          receiver: '承認者'

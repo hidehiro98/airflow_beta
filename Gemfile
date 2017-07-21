@@ -22,6 +22,9 @@ gem 'material_icons'
 gem 'cloudinary'
 gem 'carrierwave', '~> 0.11.2'
 gem 'pundit'
+gem 'rails-i18n', '5.0.3'
+gem 'devise-i18n'
+gem 'i18n-tasks', '~> 0.9.15'
 
 group :development, :test do
   gem 'binding_of_caller'
