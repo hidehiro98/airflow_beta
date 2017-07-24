@@ -5,9 +5,7 @@ Rails.application.routes.draw do
 
   scope '(:locale)', locale: /ja/ do
     devise_for :users, controllers: { registrations: 'users/registrations' }
-  end
 
-  scope '(:locale)', locale: /ja/ do
     namespace :requests do
       get 'sent', to: 'sent_requests#index'
       get 'sent/closed', to: 'sent_requests#closed'
@@ -15,9 +13,7 @@ Rails.application.routes.draw do
       get 'received', to: 'received_requests#index'
       get 'received/replied', to: 'received_requests#replied'
     end
-  end
 
-  scope '(:locale)', locale: /ja/ do
     resources :requests, except: :index do
       resources :comments, only: :create
 
@@ -27,9 +23,9 @@ Rails.application.routes.draw do
         patch 'cancel', to: 'requests#cancel'
       end
     end
-  end
 
-  resource :profile, only: [:show, :edit, :update]
+    resource :profile, only: [:show, :edit, :update]
+  end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
