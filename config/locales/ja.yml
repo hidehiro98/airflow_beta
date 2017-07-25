@@ -7,7 +7,12 @@ ja:
       index:
         new_request: '新しいリクエスト'
         open: 'オープン'
-        close: 'クローズ'
+        closed: 'クローズ'
+        search_request: '検索'
+      closed:
+        new_request: '新しいリクエスト'
+        open: 'オープン'
+        closed: 'クローズ'
         search_request: '検索'
       sent_request_card:
           pending: '保留'
@@ -18,6 +23,25 @@ ja:
           comment: 'コメント'
           delete: '削除'
           cancel: 'キャンセル'
+          due_date: '期限'
+          creator: '申請者'
+          receiver: '承認者'
+    received_requests:
+      index:
+        need_a_reply: '要返信'
+        replied: '返信済'
+      replied:
+        need_a_reply: '要返信'
+        replied: '返信済'
+      received_request_card:
+          pending: '保留'
+          accepted: '承認済'
+          rejected: '否決'
+          commented: '差し戻し'
+          canceled: 'キャンセル'
+          accept: '承認'
+          reject: '否決'
+          comment: 'コメント'
           due_date: '期限'
           creator: '申請者'
           receiver: '承認者'

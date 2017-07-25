@@ -1,3 +1,51 @@
+en:
+  layouts:
+    application:
+      title: 'Air flow -a simple work flow tool-'
+  requests:
+    sent_requests:
+      index:
+        new_request: 'New Request'
+        open: 'Open'
+        closed: 'Close'
+        search_request: 'Seach Request'
+      closed:
+        new_request: 'New Request'
+        open: 'Open'
+        closed: 'Close'
+        search_request: 'Seach Request'
+      sent_request_card:
+          pending: 'Pending'
+          accepted: 'Accepted'
+          rejected: 'Rejected'
+          commented: 'Commented'
+          canceled: 'Canceled'
+          comment: 'Comment'
+          delete: 'Delete'
+          cancel: 'Cancel'
+          due_date: 'Due Date'
+          creator: 'Creator'
+          receiver: 'Receiver'
+    received_requests:
+      index:
+        need_a_reply: 'Need a reply'
+        replied: 'Replied'
+      replied:
+        need_a_reply: 'Need a reply'
+        replied: 'Replied'
+      received_request_card:
+          pending: 'Pending'
+          accepted: 'Accepted'
+          rejected: 'Rejected'
+          commented: 'Commented'
+          canceled: 'Canceled'
+          accept: 'Accept'
+          reject: 'Reject'
+          comment: 'Comment'
+          due_date: 'Due Date'
+          creator: 'Creator'
+          receiver: 'Receiver'
+
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other
 # than English, add the necessary files in this directory.
@@ -18,27 +66,3 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
-en:
-  layouts:
-    application:
-      title: 'Air flow -a simple work flow tool-'
-  requests:
-    sent_requests:
-      index:
-        new_request: 'New Request'
-        open: 'Open'
-        close: 'Close'
-        search_request: 'Seach Request'
-      sent_request_card:
-          pending: 'Pending'
-          accepted: 'Accepted'
-          rejected: 'Rejected'
-          commented: 'Commented'
-          canceled: 'Canceled'
-          comment: 'Comment'
-          delete: 'Delete'
-          cancel: 'Cancel'
-          due_date: 'Due Date'
-          creator: 'Creator'
-          receiver: 'Receiver'
