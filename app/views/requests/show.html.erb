@@ -21,8 +21,8 @@
           <div class="comment-right-content">
             <% if policy(Comment).create? %>
               <%= simple_form_for [@request, @comment] do |f| %>
-                <%= f.input :content, label: 'Comment' %>
-                <%= f.submit 'Create a comment', class: 'btn btn-primary' %>
+                <%= f.input :content, label: t('.comment') %>
+                <%= f.submit t('.create_a_comment'), class: 'btn btn-primary' %>
               <% end %>
             <% end %>
           </div>

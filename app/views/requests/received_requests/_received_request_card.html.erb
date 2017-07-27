@@ -28,7 +28,7 @@
   <div class="card-right-part">
     <div class="card-date">
       <h5><%= t('.due_date') %></h5>
-      <p><%= request.duedate %></p>
+      <p><%= l(request.duedate, format: :short) %></p>
     </div>
     <% unless request.user == current_user %>
       <div class="card-creator">
@@ -37,7 +37,7 @@
       </div>
     <% end %>
     <div class="card-receivers">
-      <h5><%= t('.receiver') %></h5>
+      <h5><%= t('.receivers') %></h5>
     </div>
     <div class="card-receiver-list">
       <% request.receivers.each do |receiver| %>

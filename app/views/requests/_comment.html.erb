@@ -13,7 +13,7 @@
             <%= comment.author.name %>
           <% end %>
         </span>
-         commented <%= time_ago_in_words comment.created_at %> ago
+         <%= t('.commented') %><%= time_ago_in_words comment.created_at %><%= t('.ago') %>
       </h5>
     </div>
     <div class="comment-right-content">
