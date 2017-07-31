@@ -27,6 +27,7 @@ gem 'devise-i18n'
 gem 'i18n-tasks', '~> 0.9.15'
 
 group :development, :test do
+  gem 'letter_opener'
   gem 'binding_of_caller'
   gem 'better_errors'
 
