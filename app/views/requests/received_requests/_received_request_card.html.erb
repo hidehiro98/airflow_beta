@@ -3,7 +3,7 @@
     <div class="card-left-header">
       <h4>
         <span class="card-left-label label <%= card_status_class request.status %>">
-          <%= request.status.capitalize %>
+          <%= t(".#{request.status}") %>
         </span>
         <%= request.content %>
       </h4>
@@ -11,14 +11,14 @@
     <div class="card-left-bottom-row">
       <div class="card-left-bottom-button-space"></div>
       <% if policy(request.receivers.find_by(user: current_user)).accept? %>
-        <%= link_to 'Accept', accept_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-success btn-block" %>
+        <%= link_to t('.accept'), accept_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-success btn-block" %>
       <% end %>
       <div class="card-left-bottom-button-space"></div>
       <% if policy(request.receivers.find_by(user: current_user)).reject? %>
-        <%= link_to 'Reject', reject_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-danger btn-block" %>
+        <%= link_to t('.reject'), reject_request_path(request), method: :patch, class: "card-left-bottom-button btn btn-danger btn-block" %>
       <% end %>
       <div class="card-left-bottom-button-space"></div>
-      <%= link_to 'Comment', request, class: "card-left-bottom-button btn btn-primary btn-block" %>
+      <%= link_to t('.comment'), request, class: "card-left-bottom-button btn btn-primary btn-block" %>
       <div class="card-left-bottom-button-space"></div>
       <div class="card-left-bottom-button"></div>
       <div class="card-left-bottom-button-space"></div>
@@ -27,17 +27,17 @@
 
   <div class="card-right-part">
     <div class="card-date">
-      <h5>Due Date</h5>
-      <p><%= request.duedate %></p>
+      <h5><%= t('.due_date') %></h5>
+      <p><%= l(request.duedate, format: :short) %></p>
     </div>
     <% unless request.user == current_user %>
       <div class="card-creator">
-        <h5>Creator</h5>
+        <h5><%= t('.creator') %></h5>
         <p><%= request.user.name %></p>
       </div>
     <% end %>
     <div class="card-receivers">
-      <h5>Receivers</h5>
+      <h5><%= t('.receivers') %></h5>
     </div>
     <div class="card-receiver-list">
       <% request.receivers.each do |receiver| %>
