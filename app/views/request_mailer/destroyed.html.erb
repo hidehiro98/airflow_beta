@@ -1,0 +1,9 @@
+<h1>Request#destroyed</h1>
+
+<p>
+  <% if locale == I18n.default_locale %>
+    <%= link_to t('.destroyed'), request_url(@request, locale: nil) %>
+  <% else %>
+    <%= link_to t('.destroyed'), request_url(@request, locale: locale) %>
+  <% end %>
+</p>

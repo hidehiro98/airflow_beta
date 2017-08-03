@@ -22,6 +22,7 @@ ja:
         canceled: 'キャンセル'
         comment: 'コメント'
         delete: '削除'
+        delete_confirmation: 'リクエストを削除してよろしいですか？'
         cancel: 'キャンセル'
         due_date: '期限'
         creator: '申請者'
@@ -64,10 +65,38 @@ ja:
       comment: 'コメント'
       cancel: 'キャンセル'
       delete: '削除'
+      delete_confirmation: 'リクエストを削除してよろしいですか？'
+      sure: '本当にしますか？'
       due_date: '期限'
       creator: '申請者'
       receivers: '承認者'
-      delete_confirmation: 'リクエストを削除してよろしいですか？'
     comment:
       commented: 'がコメントしました。'
       ago: '前'
+  request_mailer:
+    accepted:
+      subject: '【Air flow】あなたのリクエストが承認されました。（リクエストID: %{id}）'
+      accepted: 'あなたのリクエストが承認されました。'
+    rejected:
+      subject: '【Air flow】あなたのリクエストが否決されました。（リクエストID: %{id}）'
+      rejected: 'あなたのリクエストが否決されました。'
+    commented:
+      subject: '【Air flow】リクエストにコメントしました。（リクエストID: %{id}）'
+      commented: 'リクエストにコメントしました。'
+    canceled:
+      subject: '【Air flow】リクエストをキャンセルしました。（リクエストID: %{id}）'
+      canceled: 'リクエストをキャンセルしました。'
+    created:
+      subject: '【Air flow】リクエストを作成しました。（リクエストID: %{id}）'
+      created: 'リクエストを作成しました。'
+    destroyed:
+      subject: '【Air flow】リクエストを削除しました。（リクエストID: %{id}）'
+      destroyed: 'リクエストを削除しました。'
+  receiver_mailer:
+    received:
+      subject: '【Air flow】リクエストを受信しました。（リクエストID: %{id}）'
+      received: 'リクエストを受信しました。'
+      content: '本文'
+      accept: '承認'
+      reject: '否決'
+      comment: 'コメント'

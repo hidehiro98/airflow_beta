@@ -17,6 +17,10 @@ class RequestsController < ApplicationController
     authorize @request
 
     if @request.save
+      RequestMailer.created(@request).deliver_now
+      @request.receivers.each do |receiver|
+        ReceiverMailer.received(receiver).deliver_now
+      end
       redirect_to request_path(@request)
     else
       render :new
@@ -31,12 +35,14 @@ class RequestsController < ApplicationController
 
   def destroy
     authorize @request
+    RequestMailer.destroyed(@request).deliver_now
     @request.destroy
     redirect_to requests_sent_path
   end
 
   def cancel
     authorize @request
+    RequestMailer.canceled(@request).deliver_now
     @request.canceled!
     redirect_back(fallback_location: root_path)
   end

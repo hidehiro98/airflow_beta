@@ -6,6 +6,7 @@ class CommentsController < ApplicationController
     @comment.author = current_user
     authorize @comment
     if @comment.save
+      RequestMailer.commented(@request).deliver_now
       redirect_to request_path(@request)
     else
       flash[:alert] = "Information missing."
