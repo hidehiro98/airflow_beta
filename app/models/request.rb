@@ -12,7 +12,12 @@ class Request < ApplicationRecord
   scope :closed, -> { where(status: [:accepted, :rejected, :canceled]) }
 
   def check_status
-    accepted! if receivers.all?(&:accepted?)
-    rejected! if receivers.any?(&:rejected?)
+    if receivers.all?(&:accepted?)
+      accepted!
+      RequestMailer.accepted(self).deliver_now
+    elsif receivers.any?(&:rejected?)
+      rejected!
+      RequestMailer.rejected(self).deliver_now
+    end
   end
 end

@@ -1,0 +1,13 @@
+<h1>Receiver#received</h1>
+
+<p>
+  <% if locale == I18n.default_locale %>
+    <%= link_to t('.received'), request_url(@receiver.request, locale: nil) %>
+  <% else %>
+    <%= link_to t('.received'), request_url(@receiver.request, locale: locale) %>
+  <% end %>
+</p>
+
+<p>
+  <%= "#{t('.content')}: #{@receiver.request.content}" %>
+</p>

@@ -22,6 +22,7 @@ en:
         canceled: 'Canceled'
         comment: 'Comment'
         delete: 'Delete'
+        delete_confirmation: 'Are you sure?'
         cancel: 'Cancel'
         due_date: 'Due Date'
         creator: 'Creator'
@@ -64,13 +65,40 @@ en:
       comment: 'Comment'
       cancel: 'Cancel'
       delete: 'Delete'
+      delete_confirmation: 'Are you sure?'
       due_date: 'Due Date'
       creator: 'Creator'
       receivers: 'Receivers'
-      delete_confirmation: 'Are you sure?'
     comment:
       commented: ' commented'
       ago: ' ago'
+  request_mailer:
+    accepted:
+      subject: '[Air flow] Your request is accepted.(Request ID: %{id})'
+      accepted: 'Your request is accepted.'
+    rejected:
+      subject: '[Air flow] Your request is rejected.(Request ID: %{id})'
+      rejected: 'Your request is rejected.'
+    commented:
+      subject: '[Air flow] You commented on the request.(Request ID: %{id})'
+      commented: 'You commented on the request.'
+    canceled:
+      subject: '[Air flow] You canceled the request.(Request ID: %{id})'
+      canceled: 'You canceled the request.'
+    created:
+      subject: '[Air flow] You created the request.(Request ID: %{id})'
+      created: 'You created the request.'
+    destroyed:
+      subject: '[Air flow] You destroyed the request.(Request ID: %{id})'
+      destroyed: 'You destroyed the request.'
+  receiver_mailer:
+    received:
+      subject: '[Air flow] You received the request.(Request ID: %{id})'
+      received: 'You received the request.'
+      content: 'Content'
+      accept: 'Accept'
+      reject: 'Reject'
+      comment: 'Comment'
 
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other
