@@ -5,11 +5,12 @@
         <span class="card-left-label label <%= card_status_class request.status %>">
           <%= t(".#{request.status}") %>
         </span>
-        <%= request.content %>
+        <%= request.title %>
       </h4>
     </div>
     <div>
       <p>
+        <%= auto_link(request.content, html: { target: '_blank' }, link: :urls) %>
       </p>
     </div>
     <div class="card-left-bottom-row">
