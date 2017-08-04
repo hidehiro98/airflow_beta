@@ -14,6 +14,9 @@ class RequestsController < ApplicationController
   def create
     @request = Request.new(request_params)
     @request.user = current_user
+    content_array = @request.content.split(/[\r\n]/, 2)
+    @request.title = content_array[0]
+    @request.content = content_array[1]
     authorize @request
 
     if @request.save
