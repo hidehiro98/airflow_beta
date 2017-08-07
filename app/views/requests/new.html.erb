@@ -1,12 +1,14 @@
 <div class="container">
   <div class="row">
     <div class="col-md-offset-3 col-md-6">
-      <%= simple_form_for @request do |f| %>
-        <%= f.input :content, label: t('.content') %>
-        <%= f.input :duedate, label: t('.due_date') %>
-        <%= f.association :users, collection: User.where(team: current_user.team).where.not(id: current_user), as: :check_boxes, label: t('.receivers') %>
-        <%= f.submit t('.create_a_request'), class: 'btn btn-primary' %>
-      <% end %>
+      <div class="new-request-box">
+        <%= simple_form_for @request do |f| %>
+          <%= f.input :content, label: t('.content'), input_html: {rows: 5} %>
+          <%= f.input :duedate, label: t('.due_date') %>
+          <%= f.association :users, collection: User.where(team: current_user.team).where.not(id: current_user), as: :check_boxes, label: t('.receivers') %>
+          <%= f.submit t('.create_a_request'), class: 'btn btn-primary' %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
