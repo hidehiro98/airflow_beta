@@ -2,4 +2,14 @@
 @import "footer";
 @import "navbar";
 
-body { padding-top: 50px; }
+body {
+  padding-top: 50px;
+}
+
+.container {
+  width: 100%;
+}
+
+.index-nav {
+  background-color: $very-light-gray;
+}
