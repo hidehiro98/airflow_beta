@@ -1,6 +1,6 @@
 <div class="container">
-  <div class="row">
-    <div class="col-md-offset-1 col-md-10">
+  <div class="row index-nav">
+    <div class="col-md-offset-2 col-md-8">
       <div class="tab-and-search">
         <ul class="nav nav-tabs">
           <li role="presentation" class="active">
@@ -15,7 +15,7 @@
   </div>
   <% @requests.each do |request| %>
     <div class="row">
-      <div class="col-md-offset-1 col-md-10">
+      <div class="col-md-offset-2 col-md-8">
         <%= render 'received_request_card', request: request %>
       </div>
     </div>

@@ -7,25 +7,36 @@
   margin-top: 20px;
 
   .card-left-part {
-    flex-direction: column;
     background-color: white;
     flex: 0 1 75%;
     height: 100%;
     margin-right: 3px;
     padding: 5px;
+    flex-direction: column;
     position: relative;
+    display: flex;
 
     .card-left-header {
       display: flex;
+      .card-left-label {
+        margin-right: 5px;
+        padding-top: 5px;
+      }
 
       h4 {
         font-weight: bold;
         margin-top: 0;
+        word-break: break-all;
       }
+    }
 
-      .card-left-label {
-        margin-right: 5px;
-      }
+    .card-left-content {
+      overflow-y: scroll;
+    }
+
+    .card-left-bottom-row-dummy {
+      // It will be 35px in the view, I'll have to research the reason.
+      height: 80px;
     }
 
 

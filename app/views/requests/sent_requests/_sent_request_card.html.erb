@@ -1,18 +1,17 @@
 <div class="card">
   <div class="card-left-part">
     <div class="card-left-header">
-      <h4>
-        <span class="card-left-label label <%= card_status_class request.status %>">
-          <%= t(".#{request.status}") %>
-        </span>
-        <%= request.title %>
-      </h4>
+      <div class="card-left-label label <%= card_status_class request.status %>">
+        <%= t(".#{request.status}") %>
+      </div>
+      <div>
+        <h4><%= request.title %></h4>
+      </div>
     </div>
-    <div>
-      <p>
-        <%= auto_link(request.content, html: { target: '_blank' }, link: :urls) %>
-      </p>
+    <div class="card-left-content">
+      <%= auto_link(simple_format(request.content), html: { target: '_blank' }, link: :urls) %>
     </div>
+    <div class="card-left-bottom-row-dummy"></div>
     <div class="card-left-bottom-row">
       <div class="card-left-bottom-button-space"></div>
       <div class="card-left-bottom-button"></div>
