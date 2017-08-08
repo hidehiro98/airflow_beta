@@ -6,6 +6,7 @@ class ProfilesController < ApplicationController
   end
 
   def edit
+    authorize @user
   end
 
   def update
