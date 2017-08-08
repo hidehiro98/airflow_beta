@@ -72,6 +72,12 @@ en:
     comment:
       commented: ' commented'
       ago: ' ago'
+  profiles:
+    show:
+      profile: 'Profile'
+      edit_profile: 'Edit profile'
+    edit:
+      profile_edit: 'Profile edit'
   request_mailer:
     accepted:
       subject: '[Air flow] Your request is accepted.(Request ID: %{id})'

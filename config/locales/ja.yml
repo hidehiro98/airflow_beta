@@ -73,6 +73,12 @@ ja:
     comment:
       commented: 'がコメントしました。'
       ago: '前'
+  profiles:
+    show:
+      profile: 'プロフィール'
+      edit_profile: 'プロフィールを編集'
+    edit:
+      profile_edit: 'プロフィール編集'
   request_mailer:
     accepted:
       subject: '【Air flow】あなたのリクエストが承認されました。（リクエストID: %{id}）'
