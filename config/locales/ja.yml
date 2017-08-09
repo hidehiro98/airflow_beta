@@ -1,7 +1,7 @@
 ja:
   layouts:
     application:
-      title: 'Air flow -シンプルなワークフローツール-'
+      title: 'Ringi -シンプルなワークフローツール-'
   requests:
     sent_requests:
       index:
@@ -81,26 +81,26 @@ ja:
       profile_edit: 'プロフィール編集'
   request_mailer:
     accepted:
-      subject: '【Air flow】あなたのリクエストが承認されました。（リクエストID: %{id}）'
+      subject: '【Ringi】あなたのリクエストが承認されました。（リクエストID: %{id}）'
       accepted: 'あなたのリクエストが承認されました。'
     rejected:
-      subject: '【Air flow】あなたのリクエストが否決されました。（リクエストID: %{id}）'
+      subject: '【Ringi】あなたのリクエストが否決されました。（リクエストID: %{id}）'
       rejected: 'あなたのリクエストが否決されました。'
     commented:
-      subject: '【Air flow】リクエストにコメントしました。（リクエストID: %{id}）'
+      subject: '【Ringi】リクエストにコメントしました。（リクエストID: %{id}）'
       commented: 'リクエストにコメントしました。'
     canceled:
-      subject: '【Air flow】リクエストをキャンセルしました。（リクエストID: %{id}）'
+      subject: '【Ringi】リクエストをキャンセルしました。（リクエストID: %{id}）'
       canceled: 'リクエストをキャンセルしました。'
     created:
-      subject: '【Air flow】リクエストを作成しました。（リクエストID: %{id}）'
+      subject: '【Ringi】リクエストを作成しました。（リクエストID: %{id}）'
       created: 'リクエストを作成しました。'
     destroyed:
-      subject: '【Air flow】リクエストを削除しました。（リクエストID: %{id}）'
+      subject: '【Ringi】リクエストを削除しました。（リクエストID: %{id}）'
       destroyed: 'リクエストを削除しました。'
   receiver_mailer:
     received:
-      subject: '【Air flow】リクエストを受信しました。（リクエストID: %{id}）'
+      subject: '【Ringi】リクエストを受信しました。（リクエストID: %{id}）'
       received: 'リクエストを受信しました。'
       content: '本文'
       accept: '承認'

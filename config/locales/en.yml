@@ -1,7 +1,7 @@
 en:
   layouts:
     application:
-      title: 'Air flow -a simple work flow tool-'
+      title: 'Ringi -a simple work flow tool-'
   requests:
     sent_requests:
       index:
@@ -80,26 +80,26 @@ en:
       profile_edit: 'Profile edit'
   request_mailer:
     accepted:
-      subject: '[Air flow] Your request is accepted.(Request ID: %{id})'
+      subject: '[Ringi] Your request is accepted.(Request ID: %{id})'
       accepted: 'Your request is accepted.'
     rejected:
-      subject: '[Air flow] Your request is rejected.(Request ID: %{id})'
+      subject: '[Ringi] Your request is rejected.(Request ID: %{id})'
       rejected: 'Your request is rejected.'
     commented:
-      subject: '[Air flow] You commented on the request.(Request ID: %{id})'
+      subject: '[Ringi] You commented on the request.(Request ID: %{id})'
       commented: 'You commented on the request.'
     canceled:
-      subject: '[Air flow] You canceled the request.(Request ID: %{id})'
+      subject: '[Ringi] You canceled the request.(Request ID: %{id})'
       canceled: 'You canceled the request.'
     created:
-      subject: '[Air flow] You created the request.(Request ID: %{id})'
+      subject: '[Ringi] You created the request.(Request ID: %{id})'
       created: 'You created the request.'
     destroyed:
-      subject: '[Air flow] You destroyed the request.(Request ID: %{id})'
+      subject: '[Ringi] You destroyed the request.(Request ID: %{id})'
       destroyed: 'You destroyed the request.'
   receiver_mailer:
     received:
-      subject: '[Air flow] You received the request.(Request ID: %{id})'
+      subject: '[Ringi] You received the request.(Request ID: %{id})'
       received: 'You received the request.'
       content: 'Content'
       accept: 'Accept'
