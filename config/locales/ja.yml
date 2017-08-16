@@ -1,7 +1,7 @@
 ja:
   layouts:
     application:
-      title: 'Ringi -シンプルなワークフローツール-'
+      title: 'Ringi.co -シンプルなワークフローツール-'
   requests:
     sent_requests:
       index:
@@ -81,28 +81,44 @@ ja:
       profile_edit: 'プロフィール編集'
   request_mailer:
     accepted:
-      subject: '【Ringi】あなたのリクエストが承認されました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】あなたのリクエストが承認されました。（リクエストID: %{id}）'
       accepted: 'あなたのリクエストが承認されました。'
     rejected:
-      subject: '【Ringi】あなたのリクエストが否決されました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】あなたのリクエストが否決されました。（リクエストID: %{id}）'
       rejected: 'あなたのリクエストが否決されました。'
     commented:
-      subject: '【Ringi】リクエストにコメントしました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】リクエストにコメントしました。（リクエストID: %{id}）'
       commented: 'リクエストにコメントしました。'
     canceled:
-      subject: '【Ringi】リクエストをキャンセルしました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】リクエストをキャンセルしました。（リクエストID: %{id}）'
       canceled: 'リクエストをキャンセルしました。'
     created:
-      subject: '【Ringi】リクエストを作成しました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】リクエストを作成しました。（リクエストID: %{id}）'
       created: 'リクエストを作成しました。'
     destroyed:
-      subject: '【Ringi】リクエストを削除しました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】リクエストを削除しました。（リクエストID: %{id}）'
       destroyed: 'リクエストを削除しました。'
   receiver_mailer:
     received:
-      subject: '【Ringi】リクエストを受信しました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】リクエストを受信しました。（リクエストID: %{id}）'
       received: 'リクエストを受信しました。'
       content: '本文'
       accept: '承認'
       reject: '否決'
       comment: 'コメント'
+  pages:
+    home:
+      tagline: '-シンプルなワークフローツール-'
+      try: '試してみる'
+      mailto_subject: 'Ringi.coについての問い合わせ'
+      features: '特徴'
+      single_function: '単機能'
+      single_function_content: '他の余計なものは入っていません。ワークフローのみです'
+      speedy: 'スピーディ'
+      speedy_content: '非常に軽快に動きます'
+      intuitive: '直観的'
+      intuitive_content: '使い始めが簡単です'
+      price: '価格'
+      price_title: '¥300'
+      price_campaign: '¥0 ベータテストキャンペーン中！'
+      price_content: '月あたり、ユーザーあたり。最初の3ヶ月は無料'
