@@ -2,7 +2,7 @@
   <div class="card-left-part">
     <div class="card-left-header">
       <div class="card-left-label label <%= card_status_class request.status %>">
-        <%= t(".#{request.status}") %>
+        <%= request.status_i18n %>
       </div>
       <div>
         <h4><%= request.title %></h4>
