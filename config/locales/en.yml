@@ -1,4 +1,12 @@
 en:
+  enums:
+    request:
+      status:
+        pending: 'Pending'
+        accepted: 'Accepted'
+        rejected: 'Rejected'
+        commented: 'Commented'
+        canceled: 'Canceled'
   layouts:
     application:
       title: 'Ringi.co -a simple work flow tool-'
@@ -15,11 +23,6 @@ en:
         closed: 'Close'
         search_request: 'Seach Request'
       sent_request_card:
-        pending: 'Pending'
-        accepted: 'Accepted'
-        rejected: 'Rejected'
-        commented: 'Commented'
-        canceled: 'Canceled'
         comment: 'Comment'
         delete: 'Delete'
         delete_confirmation: 'Are you sure?'
@@ -35,11 +38,6 @@ en:
         need_a_reply: 'Need a reply'
         replied: 'Replied'
       received_request_card:
-        pending: 'Pending'
-        accepted: 'Accepted'
-        rejected: 'Rejected'
-        commented: 'Commented'
-        canceled: 'Canceled'
         accept: 'Accept'
         reject: 'Reject'
         comment: 'Comment'
@@ -55,11 +53,6 @@ en:
       receivers: 'Receivers'
       create_a_request: 'Create a request'
     request_card:
-      pending: 'Pending'
-      accepted: 'Accepted'
-      rejected: 'Rejected'
-      commented: 'Commented'
-      canceled: 'Canceled'
       accept: 'Accept'
       reject: 'Reject'
       comment: 'Comment'
@@ -78,6 +71,22 @@ en:
       edit_profile: 'Edit profile'
     edit:
       profile_edit: 'Profile edit'
+  pages:
+    home:
+      tagline: '-a simple work flow tool-'
+      try: 'Free trial'
+      mailto_subject: 'Inquiry about Ringi.co'
+      features: 'Features'
+      single_function: 'Single function'
+      single_function_content: 'It does not contain other fuction. Only workflow.'
+      speedy: 'Speedy'
+      speedy_content: 'Very fast'
+      intuitive: 'Intuitive'
+      intuitive_content: 'Easy to use'
+      price: 'Price'
+      price_title: '$3'
+      price_campaign: '$0 Beta test campaign now!'
+      price_content: 'per month, per user. First 3 months are free.'
   request_mailer:
     accepted:
       subject: '[Ringi.co] Your request is accepted.(Request ID: %{id})'
@@ -105,22 +114,6 @@ en:
       accept: 'Accept'
       reject: 'Reject'
       comment: 'Comment'
-  pages:
-    home:
-      tagline: '-a simple work flow tool-'
-      try: 'Free trial'
-      mailto_subject: 'Inquiry about Ringi.co'
-      features: 'Features'
-      single_function: 'Single function'
-      single_function_content: 'It does not contain other fuction. Only workflow.'
-      speedy: 'Speedy'
-      speedy_content: 'Very fast'
-      intuitive: 'Intuitive'
-      intuitive_content: 'Easy to use'
-      price: 'Price'
-      price_title: '$3'
-      price_campaign: '$0 Beta test campaign now!'
-      price_content: 'per month, per user. First 3 months are free.'
 
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other
