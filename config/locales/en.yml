@@ -9,7 +9,7 @@ en:
         canceled: 'Canceled'
   layouts:
     application:
-      title: 'Ringi.co -a simple work flow tool-'
+      title: 'Ringi.co -a simple workflow tool-'
   requests:
     sent_requests:
       index:
@@ -73,7 +73,7 @@ en:
       profile_edit: 'Profile edit'
   pages:
     home:
-      tagline: '-a simple work flow tool-'
+      tagline: '-a simple workflow tool-'
       try: 'Free trial'
       mailto_subject: 'Inquiry about Ringi.co'
       features: 'Features'
