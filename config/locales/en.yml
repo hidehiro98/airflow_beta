@@ -1,7 +1,15 @@
 en:
+  enums:
+    request:
+      status:
+        pending: 'Pending'
+        accepted: 'Accepted'
+        rejected: 'Rejected'
+        commented: 'Commented'
+        canceled: 'Canceled'
   layouts:
     application:
-      title: 'Air flow -a simple work flow tool-'
+      title: 'Ringi.co -a simple work flow tool-'
   requests:
     sent_requests:
       index:
@@ -15,11 +23,6 @@ en:
         closed: 'Close'
         search_request: 'Seach Request'
       sent_request_card:
-        pending: 'Pending'
-        accepted: 'Accepted'
-        rejected: 'Rejected'
-        commented: 'Commented'
-        canceled: 'Canceled'
         comment: 'Comment'
         delete: 'Delete'
         delete_confirmation: 'Are you sure?'
@@ -35,11 +38,6 @@ en:
         need_a_reply: 'Need a reply'
         replied: 'Replied'
       received_request_card:
-        pending: 'Pending'
-        accepted: 'Accepted'
-        rejected: 'Rejected'
-        commented: 'Commented'
-        canceled: 'Canceled'
         accept: 'Accept'
         reject: 'Reject'
         comment: 'Comment'
@@ -55,11 +53,6 @@ en:
       receivers: 'Receivers'
       create_a_request: 'Create a request'
     request_card:
-      pending: 'Pending'
-      accepted: 'Accepted'
-      rejected: 'Rejected'
-      commented: 'Commented'
-      canceled: 'Canceled'
       accept: 'Accept'
       reject: 'Reject'
       comment: 'Comment'
@@ -72,28 +65,50 @@ en:
     comment:
       commented: ' commented'
       ago: ' ago'
+  profiles:
+    show:
+      profile: 'Profile'
+      edit_profile: 'Edit profile'
+    edit:
+      profile_edit: 'Profile edit'
+  pages:
+    home:
+      tagline: '-a simple work flow tool-'
+      try: 'Free trial'
+      mailto_subject: 'Inquiry about Ringi.co'
+      features: 'Features'
+      single_function: 'Single function'
+      single_function_content: 'It does not contain other fuction. Only workflow.'
+      speedy: 'Speedy'
+      speedy_content: 'Very fast'
+      intuitive: 'Intuitive'
+      intuitive_content: 'Easy to use'
+      price: 'Price'
+      price_title: '$3'
+      price_campaign: '$0 Beta test campaign now!'
+      price_content: 'per month, per user. First 3 months are free.'
   request_mailer:
     accepted:
-      subject: '[Air flow] Your request is accepted.(Request ID: %{id})'
+      subject: '[Ringi.co] Your request is accepted.(Request ID: %{id})'
       accepted: 'Your request is accepted.'
     rejected:
-      subject: '[Air flow] Your request is rejected.(Request ID: %{id})'
+      subject: '[Ringi.co] Your request is rejected.(Request ID: %{id})'
       rejected: 'Your request is rejected.'
     commented:
-      subject: '[Air flow] You commented on the request.(Request ID: %{id})'
+      subject: '[Ringi.co] You commented on the request.(Request ID: %{id})'
       commented: 'You commented on the request.'
     canceled:
-      subject: '[Air flow] You canceled the request.(Request ID: %{id})'
+      subject: '[Ringi.co] You canceled the request.(Request ID: %{id})'
       canceled: 'You canceled the request.'
     created:
-      subject: '[Air flow] You created the request.(Request ID: %{id})'
+      subject: '[Ringi.co] You created the request.(Request ID: %{id})'
       created: 'You created the request.'
     destroyed:
-      subject: '[Air flow] You destroyed the request.(Request ID: %{id})'
+      subject: '[Ringi.co] You destroyed the request.(Request ID: %{id})'
       destroyed: 'You destroyed the request.'
   receiver_mailer:
     received:
-      subject: '[Air flow] You received the request.(Request ID: %{id})'
+      subject: '[Ringi.co] You received the request.(Request ID: %{id})'
       received: 'You received the request.'
       content: 'Content'
       accept: 'Accept'

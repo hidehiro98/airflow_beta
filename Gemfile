@@ -26,6 +26,7 @@ gem 'rails-i18n', '5.0.3'
 gem 'devise-i18n'
 gem 'i18n-tasks', '~> 0.9.15'
 gem 'rinku', require: 'rails_rinku'
+gem 'enum_help'
 
 group :development, :test do
   gem 'letter_opener'

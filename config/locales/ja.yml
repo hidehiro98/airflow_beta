@@ -1,7 +1,15 @@
 ja:
+  enums:
+    request:
+      status:
+        pending: '保留'
+        accepted: '承認済'
+        rejected: '否決'
+        commented: '差し戻し'
+        canceled: 'キャンセル'
   layouts:
     application:
-      title: 'Air flow -シンプルなワークフローツール-'
+      title: 'Ringi.co -シンプルなワークフローツール-'
   requests:
     sent_requests:
       index:
@@ -15,11 +23,6 @@ ja:
         closed: 'クローズ'
         search_request: '検索'
       sent_request_card:
-        pending: '保留'
-        accepted: '承認済'
-        rejected: '否決'
-        commented: '差し戻し'
-        canceled: 'キャンセル'
         comment: 'コメント'
         delete: '削除'
         delete_confirmation: 'リクエストを削除してよろしいですか？'
@@ -35,11 +38,6 @@ ja:
         need_a_reply: '要返信'
         replied: '返信済'
       received_request_card:
-        pending: '保留'
-        accepted: '承認済'
-        rejected: '否決'
-        commented: '差し戻し'
-        canceled: 'キャンセル'
         accept: '承認'
         reject: '否決'
         comment: 'コメント'
@@ -55,46 +53,62 @@ ja:
       receivers: '承認者'
       create_a_request: 'リクエストを作成'
     request_card:
-      pending: '保留'
-      accepted: '承認済'
-      rejected: '否決'
-      commented: '差し戻し'
-      canceled: 'キャンセル'
       accept: '承認'
       reject: '否決'
       comment: 'コメント'
       cancel: 'キャンセル'
       delete: '削除'
       delete_confirmation: 'リクエストを削除してよろしいですか？'
-      sure: '本当にしますか？'
       due_date: '期限'
       creator: '申請者'
       receivers: '承認者'
     comment:
       commented: 'がコメントしました。'
       ago: '前'
+  profiles:
+    show:
+      profile: 'プロフィール'
+      edit_profile: 'プロフィールを編集'
+    edit:
+      profile_edit: 'プロフィール編集'
+  pages:
+    home:
+      tagline: '-シンプルなワークフローツール-'
+      try: '試してみる'
+      mailto_subject: 'Ringi.coについての問い合わせ'
+      features: '特徴'
+      single_function: '単機能'
+      single_function_content: '他の余計なものは入っていません。ワークフローのみです'
+      speedy: 'スピーディ'
+      speedy_content: '非常に軽快に動きます'
+      intuitive: '直観的'
+      intuitive_content: '使い始めが簡単です'
+      price: '価格'
+      price_title: '¥300'
+      price_campaign: '¥0 ベータテストキャンペーン中！'
+      price_content: '月あたり、ユーザーあたり。最初の3ヶ月は無料'
   request_mailer:
     accepted:
-      subject: '【Air flow】あなたのリクエストが承認されました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】あなたのリクエストが承認されました。（リクエストID: %{id}）'
       accepted: 'あなたのリクエストが承認されました。'
     rejected:
-      subject: '【Air flow】あなたのリクエストが否決されました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】あなたのリクエストが否決されました。（リクエストID: %{id}）'
       rejected: 'あなたのリクエストが否決されました。'
     commented:
-      subject: '【Air flow】リクエストにコメントしました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】リクエストにコメントしました。（リクエストID: %{id}）'
       commented: 'リクエストにコメントしました。'
     canceled:
-      subject: '【Air flow】リクエストをキャンセルしました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】リクエストをキャンセルしました。（リクエストID: %{id}）'
       canceled: 'リクエストをキャンセルしました。'
     created:
-      subject: '【Air flow】リクエストを作成しました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】リクエストを作成しました。（リクエストID: %{id}）'
       created: 'リクエストを作成しました。'
     destroyed:
-      subject: '【Air flow】リクエストを削除しました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】リクエストを削除しました。（リクエストID: %{id}）'
       destroyed: 'リクエストを削除しました。'
   receiver_mailer:
     received:
-      subject: '【Air flow】リクエストを受信しました。（リクエストID: %{id}）'
+      subject: '【Ringi.co】リクエストを受信しました。（リクエストID: %{id}）'
       received: 'リクエストを受信しました。'
       content: '本文'
       accept: '承認'

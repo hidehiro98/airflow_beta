@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
+  unauthenticated :user do
+    scope '(:locale)', locale: /ja/ do
+      root 'pages#home'
+    end
+  end
+
   get 'styleguide', to: 'pages#styleguide'
 
   scope '(:locale)', locale: /ja/ do
-    root 'requests/received_requests#index'
-
     devise_for :users, controllers: { registrations: 'users/registrations' }
+
+    get 'requests/received', to: 'requests/received_requests#index', as: 'user_root'
+
+    get '/', to: redirect('/requests/received')
 
     namespace :requests do
       get 'sent', to: 'sent_requests#index'
