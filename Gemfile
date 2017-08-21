@@ -29,7 +29,7 @@ gem 'rinku', require: 'rails_rinku'
 gem 'enum_help'
 
 group :development, :test do
-  gem 'letter_opener'
+  gem 'letter_opener_web'
   gem 'binding_of_caller'
   gem 'better_errors'
 

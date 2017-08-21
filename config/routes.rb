@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+  if Rails.env.development?
+    mount LetterOpenerWeb::Engine, at: "/letter_opener"
+  end
+
+  get 'styleguide', to: 'pages#styleguide'
+
   unauthenticated :user do
     scope '(:locale)', locale: /ja/ do
       root 'pages#home'
     end
   end
-
-  get 'styleguide', to: 'pages#styleguide'
 
   scope '(:locale)', locale: /ja/ do
     devise_for :users, controllers: { registrations: 'users/registrations' }
