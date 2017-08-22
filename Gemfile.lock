@@ -119,6 +119,10 @@ GEM
       addressable (~> 2.3)
     letter_opener (1.4.1)
       launchy (~> 2.2)
+    letter_opener_web (1.3.1)
+      actionmailer (>= 3.2)
+      letter_opener (~> 1.0)
+      railties (>= 3.2)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -146,6 +150,12 @@ GEM
     parser (2.4.0.0)
       ast (~> 2.2)
     pg (0.20.0)
+    postmark (1.10.0)
+      json
+      rake
+    postmark-rails (0.15.0)
+      actionmailer (>= 3.0.0)
+      postmark (~> 1.10.0)
     pry (0.10.4)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -264,11 +274,12 @@ DEPENDENCIES
   i18n-tasks (~> 0.9.15)
   jbuilder (~> 2.0)
   jquery-rails
-  letter_opener
+  letter_opener_web
   listen (~> 3.0.5)
   material_icons
   materialize-sass
   pg
+  postmark-rails
   pry-byebug
   pry-rails
   puma

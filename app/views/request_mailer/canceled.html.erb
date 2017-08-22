@@ -1,5 +1,9 @@
 <h1>Request#canceled</h1>
 
 <p>
-  <%= @greeting %>, find me in app/views/request_mailer/canceled.html.erb
+  <% if locale == I18n.default_locale %>
+    <%= link_to t('.canceled'), request_url(@request, locale: nil) %>
+  <% else %>
+    <%= link_to t('.canceled'), request_url(@request, locale: locale) %>
+  <% end %>
 </p>
