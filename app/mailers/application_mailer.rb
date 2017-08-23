@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'no-reply@airflow.example'
+  default from: 'noreply@ringi.co'
   layout 'mailer'
 end
