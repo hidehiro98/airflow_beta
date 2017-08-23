@@ -95,8 +95,8 @@ en:
       subject: '[Ringi.co] Your request is rejected.(Request ID: %{id})'
       rejected: 'Your request is rejected.'
     commented:
-      subject: '[Ringi.co] You commented on the request.(Request ID: %{id})'
-      commented: 'You commented on the request.'
+      subject: '[Ringi.co] Your request is commented.(Request ID: %{id})'
+      commented: 'Your request is commented'
     canceled:
       subject: '[Ringi.co] You canceled the request.(Request ID: %{id})'
       canceled: 'You canceled the request.'
@@ -110,10 +110,8 @@ en:
     received:
       subject: '[Ringi.co] You received the request.(Request ID: %{id})'
       received: 'You received the request.'
+      title: 'Title'
       content: 'Content'
-      accept: 'Accept'
-      reject: 'Reject'
-      comment: 'Comment'
 
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other

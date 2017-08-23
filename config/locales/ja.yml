@@ -95,8 +95,8 @@ ja:
       subject: '【Ringi.co】あなたのリクエストが否決されました。（リクエストID: %{id}）'
       rejected: 'あなたのリクエストが否決されました。'
     commented:
-      subject: '【Ringi.co】リクエストにコメントしました。（リクエストID: %{id}）'
-      commented: 'リクエストにコメントしました。'
+      subject: '【Ringi.co】あなたのリクエストがコメントされました。（リクエストID: %{id}）'
+      commented: 'あなたのリクエストがコメントされました。'
     canceled:
       subject: '【Ringi.co】リクエストをキャンセルしました。（リクエストID: %{id}）'
       canceled: 'リクエストをキャンセルしました。'
@@ -110,7 +110,5 @@ ja:
     received:
       subject: '【Ringi.co】リクエストを受信しました。（リクエストID: %{id}）'
       received: 'リクエストを受信しました。'
+      title: 'タイトル'
       content: '本文'
-      accept: '承認'
-      reject: '否決'
-      comment: 'コメント'
