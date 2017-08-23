@@ -110,7 +110,5 @@ ja:
     received:
       subject: '【Ringi.co】リクエストを受信しました。（リクエストID: %{id}）'
       received: 'リクエストを受信しました。'
+      title: 'タイトル'
       content: '本文'
-      accept: '承認'
-      reject: '否決'
-      comment: 'コメント'

@@ -110,10 +110,8 @@ en:
     received:
       subject: '[Ringi.co] You received the request.(Request ID: %{id})'
       received: 'You received the request.'
+      title: 'Title'
       content: 'Content'
-      accept: 'Accept'
-      reject: 'Reject'
-      comment: 'Comment'
 
 # Files in the config/locales directory are used for internationalization
 # and are automatically loaded by Rails. If you want to use locales other
