@@ -71,6 +71,7 @@ ja:
       edit_profile: 'プロフィールを編集'
     edit:
       profile_edit: 'プロフィール編集'
+      photo: '写真（推奨：正方形の写真）'
   pages:
     home:
       tagline: '-シンプルなワークフローツール-'

@@ -71,6 +71,7 @@ en:
       edit_profile: 'Edit profile'
     edit:
       profile_edit: 'Profile edit'
+      photo: 'Photo (recommended: square photo)'
   pages:
     home:
       tagline: '-a simple workflow tool-'
