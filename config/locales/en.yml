@@ -69,9 +69,11 @@ en:
     show:
       profile: 'Profile'
       edit_profile: 'Edit profile'
+      edit_password: 'Edit password'
     edit:
       profile_edit: 'Profile edit'
       photo: 'Photo (recommended: square photo)'
+      submit: 'Submit'
   pages:
     home:
       tagline: '-a simple workflow tool-'

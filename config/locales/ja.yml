@@ -69,9 +69,11 @@ ja:
     show:
       profile: 'プロフィール'
       edit_profile: 'プロフィールを編集'
+      edit_password: 'パスワードを編集'
     edit:
       profile_edit: 'プロフィール編集'
       photo: '写真（推奨：正方形の写真）'
+      submit: '更新'
   pages:
     home:
       tagline: '-シンプルなワークフローツール-'
