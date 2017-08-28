@@ -90,6 +90,12 @@ ja:
       price_title: '¥300'
       price_campaign: '¥0 ベータテストキャンペーン中！'
       price_content: '月あたり、ユーザーあたり。最初の3ヶ月は無料'
+  shared:
+    navbar:
+      profile: 'プロフィール'
+      settings: 'セッティング'
+      sign_out: 'ログアウト'
+      sign_in: 'ログイン'
   request_mailer:
     accepted:
       subject: '【Ringi.co】あなたのリクエストが承認されました。（リクエストID: %{id}）'
