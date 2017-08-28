@@ -69,8 +69,11 @@ ja:
     show:
       profile: 'プロフィール'
       edit_profile: 'プロフィールを編集'
+      edit_password: 'パスワードを編集'
     edit:
       profile_edit: 'プロフィール編集'
+      photo: '写真（推奨：正方形の写真）'
+      submit: '更新'
   pages:
     home:
       tagline: '-シンプルなワークフローツール-'
@@ -87,6 +90,12 @@ ja:
       price_title: '¥300'
       price_campaign: '¥0 ベータテストキャンペーン中！'
       price_content: '月あたり、ユーザーあたり。最初の3ヶ月は無料'
+  shared:
+    navbar:
+      profile: 'プロフィール'
+      settings: 'セッティング'
+      sign_out: 'ログアウト'
+      sign_in: 'ログイン'
   request_mailer:
     accepted:
       subject: '【Ringi.co】あなたのリクエストが承認されました。（リクエストID: %{id}）'

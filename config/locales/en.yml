@@ -69,8 +69,11 @@ en:
     show:
       profile: 'Profile'
       edit_profile: 'Edit profile'
+      edit_password: 'Edit password'
     edit:
       profile_edit: 'Profile edit'
+      photo: 'Photo (recommended: square photo)'
+      submit: 'Submit'
   pages:
     home:
       tagline: '-a simple workflow tool-'
@@ -87,6 +90,12 @@ en:
       price_title: '$3'
       price_campaign: '$0 Beta test campaign now!'
       price_content: 'per month, per user. First 3 months are free.'
+  shared:
+    navbar:
+      profile: 'Profile'
+      settings: 'Settings'
+      sign_out: 'Logout'
+      sign_in: 'Login'
   request_mailer:
     accepted:
       subject: '[Ringi.co] Your request is accepted.(Request ID: %{id})'

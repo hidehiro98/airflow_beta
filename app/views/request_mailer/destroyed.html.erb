@@ -2,8 +2,8 @@
 
 <p>
   <% if locale == I18n.default_locale %>
-    <%= link_to t('.destroyed'), request_url(@request, locale: nil) %>
+    <%= link_to t('.destroyed'), request_url(@request, subdomain: 'www', locale: nil) %>
   <% else %>
-    <%= link_to t('.destroyed'), request_url(@request, locale: locale) %>
+    <%= link_to t('.destroyed'), request_url(@request, subdomain: 'www', locale: locale) %>
   <% end %>
 </p>

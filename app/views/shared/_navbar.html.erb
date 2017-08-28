@@ -3,18 +3,17 @@
   <% if user_signed_in? %>
     <div class="navbar-wagon-tabs">
       <div class="navbar-wagon-tab">
-        <%= link_to requests_sent_path do %>
-          <div class="badge-container">
-            <i class="material-icons">open_in_new</i>
-          </div>
-        <% end %>
-      </div>
-
-      <div class="navbar-wagon-tab">
         <%= link_to requests_received_path do %>
           <div class="badge-container">
             <i class="material-icons">mail_outline</i>
             <div class="badge badge-red"><%= current_user.receivers.pending.size %></div>
+          </div>
+        <% end %>
+      </div>
+      <div class="navbar-wagon-tab">
+        <%= link_to requests_sent_path do %>
+          <div class="badge-container">
+            <i class="material-icons">open_in_new</i>
           </div>
         <% end %>
       </div>
@@ -40,17 +39,17 @@
           <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
             <li>
               <%= link_to profile_path do %>
-                <i class="material-icons">account_circle</i> <%= t(".profile", default: "Profile") %>
+                <i class="material-icons">account_circle</i><%= t(".profile") %>
               <% end %>
             </li>
             <li>
               <%#= link_to "#" do %>
-                <!-- <i class="material-icons">settings</i>  <%= t(".Settings", default: "Settings") %> -->
+                <!-- <i class="material-icons">settings</i>  <%= t(".settings") %> -->
               <%# end %>
             </li>
             <li>
               <%= link_to destroy_user_session_path, method: :delete do %>
-                <i class="material-icons">not_interested</i>  <%= t(".sign_out", default: "Log out") %>
+                <i class="material-icons">not_interested</i><%= t(".sign_out") %>
               <% end %>
             </li>
           </ul>
@@ -60,7 +59,7 @@
     <% else %>
 
       <!-- Login text link -->
-      <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to t(".sign_in"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <% end %>
 
@@ -71,9 +70,16 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+        <li>
+          <%= link_to profile_path do %>
+            <i class="material-icons">account_circle</i><%= t(".profile") %>
+          <% end %>
+        </li>
+        <li>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+            <i class="material-icons">not_interested</i><%= t(".sign_out") %>
+          <% end %>
+        </li>
       </ul>
     </div>
   </div>

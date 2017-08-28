@@ -5,12 +5,12 @@
         <h2><%= t('.profile_edit') %></h2>
         <%= simple_form_for(@user, url: '/profile') do |f| %>
           <%#= image_tag @user.photo.url.thumb if @user.photo? %>
-          <%= f.input :photo %>
+          <%= f.input :photo, label: t('.photo') %>
           <%= f.input :photo_cache, as: :hidden %>
           <%= f.input :first_name %>
           <%= f.input :last_name %>
           <%= f.input :email %>
-          <%= f.submit %>
+          <%= f.submit t('.submit'), class: 'btn btn-primary' %>
         <% end %>
       </div>
     </div>
