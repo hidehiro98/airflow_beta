@@ -14,6 +14,7 @@ class User < ApplicationRecord
 
   validates :first_name, presence: true, uniqueness: { scope: [:last_name, :team] }
   validates :last_name, :team, presence: true
+  validates :email, uniqueness: true
 
   def name
     "#{first_name} #{last_name}"
