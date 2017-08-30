@@ -100,6 +100,8 @@ ja:
     accepted:
       subject: '【Ringi.co】あなたのリクエストが承認されました。（リクエストID: %{id}）'
       accepted: 'あなたのリクエストが承認されました。'
+      title: 'タイトル'
+      content: '本文'
     rejected:
       subject: '【Ringi.co】あなたのリクエストが否決されました。（リクエストID: %{id}）'
       rejected: 'あなたのリクエストが否決されました。'
