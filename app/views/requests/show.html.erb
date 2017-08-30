@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-offset-1 col-md-10">
+    <div class="col-md-offset-2 col-md-8">
       <%= render 'request_card', request: @request %>
     </div>
   </div>
 
   <div class="row">
-    <div class="col-md-offset-1 col-md-10">
+    <div class="col-md-offset-2 col-md-8">
       <% @request.comments.each do |comment| %>
         <%= render 'comment', comment: comment %>
       <% end %>
@@ -14,7 +14,7 @@
   </div>
 
   <div class="row">
-    <div class="col-md-offset-1 col-md-10">
+    <div class="col-md-offset-2 col-md-8">
       <div class="comment">
         <div class="comment-left"></div>
         <div class="comment-right">
