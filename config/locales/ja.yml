@@ -111,6 +111,8 @@ ja:
     canceled:
       subject: '【Ringi.co】リクエストをキャンセルしました。（リクエストID: %{id}）'
       canceled: 'リクエストをキャンセルしました。'
+      title: 'タイトル'
+      content: '本文'
     created:
       subject: '【Ringi.co】リクエストを作成しました。（リクエストID: %{id}）'
       created: 'リクエストを作成しました。'

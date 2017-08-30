@@ -111,6 +111,8 @@ en:
     canceled:
       subject: '[Ringi.co] You canceled the request.(Request ID: %{id})'
       canceled: 'You canceled the request.'
+      title: 'Title'
+      content: 'Content'
     created:
       subject: '[Ringi.co] You created the request.(Request ID: %{id})'
       created: 'You created the request.'
