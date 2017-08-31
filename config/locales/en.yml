@@ -117,6 +117,8 @@ en:
     created:
       subject: '[Ringi.co] You created the request.(Request ID: %{id})'
       created: 'You created the request.'
+      title: 'Title'
+      content: 'Content'
     destroyed:
       subject: '[Ringi.co] You destroyed the request.(Request ID: %{id})'
       destroyed: 'You destroyed the request.'

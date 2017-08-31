@@ -117,6 +117,8 @@ ja:
     created:
       subject: '【Ringi.co】リクエストを作成しました。（リクエストID: %{id}）'
       created: 'リクエストを作成しました。'
+      title: 'タイトル'
+      content: '本文'
     destroyed:
       subject: '【Ringi.co】リクエストを削除しました。（リクエストID: %{id}）'
       destroyed: 'リクエストを削除しました。'
