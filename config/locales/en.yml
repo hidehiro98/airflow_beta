@@ -127,6 +127,8 @@ en:
     rejected:
       subject: '[Ringi.co] Your request is rejected.(Request ID: %{id})'
       rejected: 'Your request is rejected.'
+      title: 'Title'
+      content: 'Content'
   receiver_mailer:
     received:
       subject: '[Ringi.co] You received the request.(Request ID: %{id})'

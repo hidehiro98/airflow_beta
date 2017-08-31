@@ -127,6 +127,8 @@ ja:
     rejected:
       subject: '【Ringi.co】あなたのリクエストが否決されました。（リクエストID: %{id}）'
       rejected: 'あなたのリクエストが否決されました。'
+      title: 'タイトル'
+      content: '本文'
   receiver_mailer:
     received:
       subject: '【Ringi.co】リクエストを受信しました。（リクエストID: %{id}）'
