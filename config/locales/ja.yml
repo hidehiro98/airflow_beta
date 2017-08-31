@@ -122,6 +122,8 @@ ja:
     destroyed:
       subject: '【Ringi.co】リクエストを削除しました。（リクエストID: %{id}）'
       destroyed: 'リクエストを削除しました。'
+      title: 'タイトル'
+      content: '本文'
     rejected:
       subject: '【Ringi.co】あなたのリクエストが否決されました。（リクエストID: %{id}）'
       rejected: 'あなたのリクエストが否決されました。'

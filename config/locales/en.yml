@@ -122,6 +122,8 @@ en:
     destroyed:
       subject: '[Ringi.co] You destroyed the request.(Request ID: %{id})'
       destroyed: 'You destroyed the request.'
+      title: 'Title'
+      content: 'Content'
     rejected:
       subject: '[Ringi.co] Your request is rejected.(Request ID: %{id})'
       rejected: 'Your request is rejected.'
