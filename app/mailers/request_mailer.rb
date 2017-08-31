@@ -25,8 +25,9 @@ class RequestMailer < ApplicationMailer
   #
   #   en.request_mailer.commented.subject
   #
-  def commented(request)
+  def commented(request, comment)
     @request = request
+    @comment = comment
     mail to: @request.user.email, subject: default_i18n_subject(id: @request.id)
   end
 

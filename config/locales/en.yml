@@ -102,12 +102,13 @@ en:
       accepted: 'Your request is accepted.'
       title: 'Title'
       content: 'Content'
-    rejected:
-      subject: '[Ringi.co] Your request is rejected.(Request ID: %{id})'
-      rejected: 'Your request is rejected.'
     commented:
       subject: '[Ringi.co] Your request is commented.(Request ID: %{id})'
       commented: 'Your request is commented'
+      comment_content: 'Comment content'
+      comment_author: 'Comment author'
+      title: 'Request title'
+      content: 'Request content'
     canceled:
       subject: '[Ringi.co] You canceled the request.(Request ID: %{id})'
       canceled: 'You canceled the request.'
@@ -119,6 +120,9 @@ en:
     destroyed:
       subject: '[Ringi.co] You destroyed the request.(Request ID: %{id})'
       destroyed: 'You destroyed the request.'
+    rejected:
+      subject: '[Ringi.co] Your request is rejected.(Request ID: %{id})'
+      rejected: 'Your request is rejected.'
   receiver_mailer:
     received:
       subject: '[Ringi.co] You received the request.(Request ID: %{id})'
