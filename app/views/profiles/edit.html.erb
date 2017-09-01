@@ -3,7 +3,7 @@
     <div class="col-md-offset-3 col-md-6">
       <div class="new-request-box">
         <h2><%= t('.profile_edit') %></h2>
-        <%= simple_form_for(@user, url: '/profile') do |f| %>
+        <%= simple_form_for(@user, url: profile_path) do |f| %>
           <%#= image_tag @user.photo.url.thumb if @user.photo? %>
           <%= f.input :photo, label: t('.photo') %>
           <%= f.input :photo_cache, as: :hidden %>

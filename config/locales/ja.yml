@@ -100,21 +100,35 @@ ja:
     accepted:
       subject: '【Ringi.co】あなたのリクエストが承認されました。（リクエストID: %{id}）'
       accepted: 'あなたのリクエストが承認されました。'
-    rejected:
-      subject: '【Ringi.co】あなたのリクエストが否決されました。（リクエストID: %{id}）'
-      rejected: 'あなたのリクエストが否決されました。'
+      title: 'タイトル'
+      content: '本文'
     commented:
       subject: '【Ringi.co】あなたのリクエストがコメントされました。（リクエストID: %{id}）'
       commented: 'あなたのリクエストがコメントされました。'
+      comment_content: 'コメント本文'
+      comment_author: 'コメント著者'
+      title: 'リクエストタイトル'
+      content: 'リクエスト本文'
     canceled:
       subject: '【Ringi.co】リクエストをキャンセルしました。（リクエストID: %{id}）'
       canceled: 'リクエストをキャンセルしました。'
+      title: 'タイトル'
+      content: '本文'
     created:
       subject: '【Ringi.co】リクエストを作成しました。（リクエストID: %{id}）'
       created: 'リクエストを作成しました。'
+      title: 'タイトル'
+      content: '本文'
     destroyed:
       subject: '【Ringi.co】リクエストを削除しました。（リクエストID: %{id}）'
       destroyed: 'リクエストを削除しました。'
+      title: 'タイトル'
+      content: '本文'
+    rejected:
+      subject: '【Ringi.co】あなたのリクエストが否決されました。（リクエストID: %{id}）'
+      rejected: 'あなたのリクエストが否決されました。'
+      title: 'タイトル'
+      content: '本文'
   receiver_mailer:
     received:
       subject: '【Ringi.co】リクエストを受信しました。（リクエストID: %{id}）'

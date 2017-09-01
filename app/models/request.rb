@@ -4,7 +4,7 @@ class Request < ApplicationRecord
   has_many :receivers, dependent: :destroy
   has_many :users, through: :receivers
 
-  validates :title, :user, :duedate, presence: true
+  validates :title, :user, :duedate, :receivers, presence: true
 
   enum status: { pending: 0, accepted: 1, rejected: 2, commented: 3, canceled: 4 }
 

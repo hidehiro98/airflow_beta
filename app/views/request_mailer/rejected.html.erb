@@ -1,9 +1,14 @@
-<h1>Request#rejected</h1>
-
 <p>
   <% if locale == I18n.default_locale %>
     <%= link_to t('.rejected'), request_url(@request, subdomain: 'www', locale: nil) %>
   <% else %>
     <%= link_to t('.rejected'), request_url(@request, subdomain: 'www', locale: locale) %>
   <% end %>
+</p>
+
+<p>
+  <%= "#{t('.title')}: #{@request.title}" %>
+</p>
+<p>
+  <%= "#{t('.content')}: #{@request.content}" %>
 </p>

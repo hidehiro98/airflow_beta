@@ -46,6 +46,7 @@ class RequestsController < ApplicationController
   def cancel
     authorize @request
     RequestMailer.canceled(@request).deliver_now
+    @request.receivers.each(&:canceled!)
     @request.canceled!
     redirect_back(fallback_location: root_path)
   end

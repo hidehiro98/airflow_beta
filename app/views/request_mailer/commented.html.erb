@@ -1,9 +1,20 @@
-<h1>Request#commented</h1>
-
 <p>
   <% if locale == I18n.default_locale %>
     <%= link_to t('.commented'), request_url(@request, subdomain: 'www', locale: nil) %>
   <% else %>
     <%= link_to t('.commented'), request_url(@request, subdomain: 'www', locale: locale) %>
   <% end %>
+</p>
+
+<p>
+  <%= "#{t('.comment_content')}: #{@comment.content}" %>
+</p>
+<p>
+  <%= "#{t('.comment_author')}: #{@comment.author.name}" %>
+</p>
+<p>
+  <%= "#{t('.title')}: #{@request.title}" %>
+</p>
+<p>
+  <%= "#{t('.content')}: #{@request.content}" %>
 </p>

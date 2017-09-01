@@ -1,3 +1,5 @@
-Request#commented
-
-You commented on the request.
+<%= t('.commented') %>
+<%= "#{t('.comment_content')}: #{@comment.content}" %>
+<%= "#{t('.comment_author')}: #{@comment.author.name}" %>
+<%= "#{t('.title')}: #{@request.title}" %>
+<%= "#{t('.content')}: #{@request.content}" %>
