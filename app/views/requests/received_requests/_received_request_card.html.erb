@@ -6,6 +6,12 @@
           <%= request.status_i18n %>
         </div>
       </div>
+      <% unless request.comments.size.zero? %>
+        <%= material_icon.chat_bubble_outline %>
+        <div class="card-comment-size">
+          <%= request.comments.size %>
+        </div>
+      <% end %>
       <div>
         <h4><%= request.title %></h4>
       </div>
