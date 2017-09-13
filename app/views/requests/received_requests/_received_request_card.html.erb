@@ -1,9 +1,17 @@
 <div class="card">
   <div class="card-left-part">
     <div class="card-left-header">
-      <div class="card-left-label label <%= card_status_class request.status %>">
-        <%= request.status_i18n %>
+      <div class="label">
+        <div class="card-left-label label <%= card_status_class request.status %>">
+          <%= request.status_i18n %>
+        </div>
       </div>
+      <% unless request.comments.size.zero? %>
+        <%= material_icon.chat_bubble_outline %>
+        <div class="card-comment-size">
+          <%= request.comments.size %>
+        </div>
+      <% end %>
       <div>
         <h4><%= request.title %></h4>
       </div>
