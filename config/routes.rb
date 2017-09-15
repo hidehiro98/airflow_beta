@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
@@ -35,6 +36,8 @@ Rails.application.routes.draw do
         patch 'cancel', to: 'requests#cancel'
       end
     end
+
+    resources :teams, only: [:new, :create, :show]
 
     resource :profile, only: [:show, :edit, :update]
   end
