@@ -5,7 +5,7 @@
         <%= simple_form_for @request do |f| %>
           <%= f.input :content, label: t('.content'), input_html: {rows: 5}, required: true %>
           <%= f.input :duedate, label: t('.due_date') %>
-          <%= f.association :users, collection: User.where(team: current_user.team).where.not(id: current_user), as: :check_boxes, label: t('.receivers'), required: true %>
+          <%= f.association :users, collection: User.where(team: current_user.team).where.not(id: current_user), as: :check_boxes, label: t('.receivers'), required: true, item_wrapper_class: 'inline-block-receiver' %>
           <%= f.submit t('.create_a_request'), class: 'btn btn-primary' %>
         <% end %>
       </div>

@@ -74,6 +74,12 @@ en:
       profile_edit: 'Profile edit'
       photo: 'Photo (recommended: square photo)'
       submit: 'Submit'
+  teams:
+    new:
+      name: 'Team name'
+      create_a_team: 'Create a team'
+    show:
+      created: 'You created team:'
   pages:
     home:
       tagline: '-a simple workflow tool-'

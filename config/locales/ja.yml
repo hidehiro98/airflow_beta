@@ -74,6 +74,12 @@ ja:
       profile_edit: 'プロフィール編集'
       photo: '写真（推奨：正方形の写真）'
       submit: '更新'
+  teams:
+    new:
+      name: 'チーム名'
+      create_a_team: 'チームを作成する'
+    show:
+      created: 'チームを作成しました:'
   pages:
     home:
       tagline: '-シンプルなワークフローツール-'
