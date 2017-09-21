@@ -28,6 +28,7 @@ gem 'i18n-tasks', '~> 0.9.15'
 gem 'rinku', require: 'rails_rinku'
 gem 'enum_help'
 gem 'postmark-rails'
+gem 'seed-fu', '~> 2.3'
 
 group :development, :test do
   gem 'letter_opener_web'
