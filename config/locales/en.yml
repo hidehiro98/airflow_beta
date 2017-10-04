@@ -13,11 +13,13 @@ en:
   requests:
     sent_requests:
       index:
+        title: 'Sent requests'
         new_request: 'New Request'
         open: 'Open'
         closed: 'Close'
         search_request: 'Seach Request'
       closed:
+        title: 'Sent requests'
         new_request: 'New Request'
         open: 'Open'
         closed: 'Close'
@@ -32,9 +34,11 @@ en:
         receivers: 'Receivers'
     received_requests:
       index:
+        title: 'Received requests'
         need_a_reply: 'Need a reply'
         replied: 'Replied'
       replied:
+        title: 'Received requests'
         need_a_reply: 'Need a reply'
         replied: 'Replied'
       received_request_card:
@@ -45,9 +49,11 @@ en:
         creator: 'Creator'
         receivers: 'Receivers'
     show:
+      title: 'Request'
       create_a_comment: 'Create a comment'
       comment: 'Comment'
     new:
+      title: 'New request'
       content: 'Content'
       due_date: 'Due date'
       receivers: 'Receivers'

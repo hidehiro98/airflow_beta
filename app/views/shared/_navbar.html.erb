@@ -2,7 +2,7 @@
   <!-- Tabs -->
   <% if user_signed_in? %>
     <div class="navbar-wagon-tabs">
-      <div class="navbar-wagon-tab">
+      <div class="navbar-wagon-tab <%= yield(:title_tag_for_received) %>">
         <%= link_to requests_received_path do %>
           <div class="badge-container">
             <i class="material-icons">mail_outline</i>
@@ -14,7 +14,7 @@
           </div>
         <% end %>
       </div>
-      <div class="navbar-wagon-tab">
+      <div class="navbar-wagon-tab <%= yield(:title_tag_for_sent) %>">
         <%= link_to requests_sent_path do %>
           <div class="badge-container">
             <i class="material-icons">open_in_new</i>

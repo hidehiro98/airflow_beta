@@ -13,11 +13,13 @@ ja:
   requests:
     sent_requests:
       index:
+        title: '送信したリクエスト'
         new_request: '新しいリクエスト'
         open: 'オープン'
         closed: 'クローズ'
         search_request: '検索'
       closed:
+        title: '送信したリクエスト'
         new_request: '新しいリクエスト'
         open: 'オープン'
         closed: 'クローズ'
@@ -32,9 +34,11 @@ ja:
         receivers: '承認者'
     received_requests:
       index:
+        title: '受信したリクエスト'
         need_a_reply: '要返信'
         replied: '返信済'
       replied:
+        title: '受信したリクエスト'
         need_a_reply: '要返信'
         replied: '返信済'
       received_request_card:
@@ -45,9 +49,11 @@ ja:
         creator: '申請者'
         receivers: '承認者'
     show:
+      title: 'リクエスト'
       create_a_comment: 'コメントする'
       comment: 'コメント'
     new:
+      title: '新しいリクエスト'
       content: '本文'
       due_date: '期限'
       receivers: '承認者'
