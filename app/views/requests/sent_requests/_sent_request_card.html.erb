@@ -22,7 +22,9 @@
     <div class="card-left-bottom-row-dummy"></div>
     <div class="card-left-bottom-row">
       <div class="card-left-bottom-button-space"></div>
-      <div class="card-left-bottom-button"></div>
+      <% if policy(request).update? %>
+        <%= link_to t('.edit'), edit_request_path(request), class: "card-left-bottom-button btn btn-primary btn-block" %>
+      <% end %>
       <div class="card-left-bottom-button-space"></div>
       <div class="card-left-bottom-button"></div>
       <div class="card-left-bottom-button-space"></div>

@@ -31,9 +31,22 @@ class RequestsController < ApplicationController
   end
 
   def edit
+    authorize @request
   end
 
   def update
+    @request.update(request_params)
+    authorize @request
+
+    if @request.save
+      RequestMailer.edited(@request).deliver_now
+      @request.receivers.each do |receiver|
+        ReceiverMailer.edited(receiver).deliver_now
+      end
+      redirect_to request_path(@request)
+    else
+      render :edit
+    end
   end
 
   def destroy

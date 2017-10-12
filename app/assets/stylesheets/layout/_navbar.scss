@@ -36,6 +36,10 @@
   }
 }
 
+.current {
+  opacity: 0.5;
+}
+
 
 /* Navbar right section (with form, links, button) */
 .navbar-wagon-right {
@@ -58,11 +62,11 @@
 
 /* Navbar standard link */
 .navbar-wagon-link {
-  color: #616668;
+  color: white;
   font-size: 14px;
 }
 .navbar-wagon-link:hover {
-  color: #da552f;
+  color: $light-gray;
   text-decoration: none;
 }
 

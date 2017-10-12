@@ -9,4 +9,9 @@ class ReceiverMailer < ApplicationMailer
     @receiver = receiver
     mail to: @receiver.user.email, subject: default_i18n_subject(id: @receiver.request.id)
   end
+
+  def edited(receiver)
+    @receiver = receiver
+    mail to: @receiver.user.email, subject: default_i18n_subject(id: @receiver.request.id)
+  end
 end

@@ -13,16 +13,19 @@ ja:
   requests:
     sent_requests:
       index:
+        title: '送信したリクエスト'
         new_request: '新しいリクエスト'
         open: 'オープン'
         closed: 'クローズ'
         search_request: '検索'
       closed:
+        title: '送信したリクエスト'
         new_request: '新しいリクエスト'
         open: 'オープン'
         closed: 'クローズ'
         search_request: '検索'
       sent_request_card:
+        edit: '編集'
         comment: 'コメント'
         delete: '削除'
         delete_confirmation: 'リクエストを削除してよろしいですか？'
@@ -32,9 +35,11 @@ ja:
         receivers: '承認者'
     received_requests:
       index:
+        title: '受信したリクエスト'
         need_a_reply: '要返信'
         replied: '返信済'
       replied:
+        title: '受信したリクエスト'
         need_a_reply: '要返信'
         replied: '返信済'
       received_request_card:
@@ -45,17 +50,26 @@ ja:
         creator: '申請者'
         receivers: '承認者'
     show:
+      title: 'リクエスト'
       create_a_comment: 'コメントする'
       comment: 'コメント'
     new:
+      title: '新しいリクエスト'
       content: '本文'
       due_date: '期限'
       receivers: '承認者'
       create_a_request: 'リクエストを作成'
+    edit:
+      title: 'リクエストを編集'
+      content: '本文'
+      due_date: '期限'
+      receivers: '承認者'
+      create_a_request: 'リクエストを編集'
     request_card:
       accept: '承認'
       reject: '否決'
       comment: 'コメント'
+      edit: '編集'
       cancel: 'キャンセル'
       delete: '削除'
       delete_confirmation: 'リクエストを削除してよろしいですか？'
@@ -130,12 +144,22 @@ ja:
       destroyed: 'リクエストを削除しました。'
       title: 'タイトル'
       content: '本文'
+    edited:
+      subject: '【Ringi.co】リクエストを編集しました。（リクエストID: %{id}）'
+      edited: 'リクエストを編集しました。'
+      title: 'タイトル'
+      content: '本文'
     rejected:
       subject: '【Ringi.co】あなたのリクエストが否決されました。（リクエストID: %{id}）'
       rejected: 'あなたのリクエストが否決されました。'
       title: 'タイトル'
       content: '本文'
   receiver_mailer:
+    edited:
+      subject: '【Ringi.co】リクエストが編集されました。（リクエストID: %{id}）'
+      edited: 'リクエストが編集されました。'
+      title: 'タイトル'
+      content: '本文'
     received:
       subject: '【Ringi.co】リクエストを受信しました。（リクエストID: %{id}）'
       received: 'リクエストを受信しました。'
