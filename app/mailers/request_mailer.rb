@@ -46,6 +46,11 @@ class RequestMailer < ApplicationMailer
     mail to: @request.user.email, subject: default_i18n_subject(id: @request.id)
   end
 
+  def edited(request)
+    @request = request
+    mail to: @request.user.email, subject: default_i18n_subject(id: @request.id)
+  end
+
   def destroyed(request)
     @request = request
     mail to: @request.user.email, subject: default_i18n_subject(id: @request.id)
